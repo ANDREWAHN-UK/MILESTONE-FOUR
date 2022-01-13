@@ -12,4 +12,5 @@ urlpatterns = [
         name='delete_product'
         ),
     path('create/', views.create_review, name='create_review'),
+    path('view/', views.review, name='review'),
     ]

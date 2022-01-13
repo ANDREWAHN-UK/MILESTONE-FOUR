@@ -102,22 +102,27 @@ def delete_product(request, product_id):
     return redirect(reverse('store'))
 
 
+def review(request):
+    reviews = Review.objects.all()
+    context = {'reviews': reviews}
+    return render(request, 'store/reviews.html', context)
+
 
 def create_review(request):
     """create a review for the store """
 
     if request.method == 'POST':
-        form = ProductReviewForm(request.POST, request.FILES)
+        form = ReviewForm(request.POST, request.FILES)
         if form.is_valid():
             product = form.save()
-            messages.success(request, f'Successfully reviewed {product.name}!')
+            messages.success(request, f'Thanks for your review!')
             return redirect(reverse('store'))
         else:
             messages.error(
                 request, 'Failed to review product. Is the form valid?'
                 )
     else:
-        form = ProductReviewForm()
+        form = ReviewForm()
     template = 'store/create_review.html'
     context = {
         'form': form,

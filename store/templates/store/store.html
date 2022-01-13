@@ -58,8 +58,16 @@
           {% endif %}
           {% if product.rating %}
           <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-          {% else %}
+          <small class="ml-3">
+            <a class="text-danger" href="{% url 'review' %}">Reviews</a>
+          </small>
+          {% else %}          
           <small class="text-muted">No Rating</small>
+          {% endif %}
+          {% if product.category %}
+          <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.category }} / 5</small>
+          {% else %}          
+          <small class="text-muted"></small>
           {% endif %}
         </div>
       </div>
