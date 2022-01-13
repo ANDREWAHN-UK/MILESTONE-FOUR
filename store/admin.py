@@ -45,3 +45,8 @@ class ReviewAdmin(admin.ModelAdmin):
         'rating',        
         ]
     exclude = ('created_at', 'updated_at',)
+
+    # registers your model with the admin site
+admin.site.register(Product, ProductAdmin)
+admin.site.register(Category, CategoryAdmin)
+admin.site.register(Review)
