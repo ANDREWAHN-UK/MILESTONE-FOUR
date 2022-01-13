@@ -67,7 +67,11 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates'), os.path.join(BASE_DIR, 'templates', 'allauth'),],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'), os.path.join(
+                BASE_DIR, 'templates', 'allauth'
+                ),
+            ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -75,9 +79,10 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'cart.contexts.cart_contents'
             ],
 
-            # the below done as intent is to use forms throughout whole project. 
+            # the below done as intent is to use forms throughout whole project.
             # This is from CI Checkout Video 5
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',
@@ -161,7 +166,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+MEDIA_URL = '/media/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
+# the below makes it so images added through the admin panel go to and are accessed from static/images
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 

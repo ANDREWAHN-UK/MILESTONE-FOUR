@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-{% load cart_tools %}
+{% load cart_tools %} 
 
 {% block page_header %}
 <div class="container header-container">
@@ -109,7 +109,7 @@
                                 </span>
                                 <span class="text-uppercase">Back to the Menu</span>
                             </a>
-                            <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
+                            <a href="" class="btn btn-black rounded-0 btn-lg">
                                 <span class="text-uppercase">Secure Checkout</span>
                                 <span class="icon">
                                     <i class="fas fa-lock"></i>
@@ -139,3 +139,25 @@
 {% block postloadjs %}
 <!-- block.super is used to deconflict the postload js stuff from base.html -->
 {{ block.super }}
+
+<script src="{% static 'scripts/cart_quantity.js' %}"></script>
+
+<script>
+    $('.remove-item').click(function (e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/cart/remove/${itemId}/`;
+        var data = {
+            'csrfmiddlewaretoken': csrfToken
+        };
+
+        $.post(url, data)
+            .done(function () {
+                location.reload();
+            });
+    })
+</script>
+
+{% endblock %}
+
+{% endblock %}
