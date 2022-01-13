@@ -1,0 +1,50 @@
+<!-- this is based on CI video Toasts - part 1. -->
+
+<!-- More information on bootstrap toasts: https://getbootstrap.com/docs/4.3/components/toasts/ -->
+
+<div class="toast custom-toast rounded-0 border-top-0" data-autohide="false">
+    <div class="arrow-up arrow-success"></div>
+    <div class="w-100 toast-capper bg-success"></div>
+    <div class="toast-header bg-white text-dark">
+        <strong class="mr-auto">Success!</strong>        
+        <button type="button" class="btn-close close-toast" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body bg-white">
+
+        <div class="row">
+            <div class="col">
+                {{ message }}    
+            </div>
+        </div>   
+        {% if grand_total %}  
+        <p class="logo-font bg-white text-black py-1">Your Order so far ({{ product_count }}) items</p>
+        <div class="cart-notification-wrapper">
+            {% for item in cart_items %}
+                <div class="row">
+                    <div class="col-3 my-1">
+                        <img class="w-100" src="{{ item.product.image.url }}">
+                    </div>
+                    <div class="col-9">
+                        <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                        
+                        <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="row">
+            <div class="col">
+                Total: 
+                <span class="float-right">£ {{ total|floatformat:2 }}</span>
+
+                <a href="{% url 'view_cart' %}" class="btn btn-black btn-block rounded-0">
+                    <span class="text-uppercase">View Order</span>
+                    <span class="icon">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+        {% endif %} 
+    </div>
+</div>
