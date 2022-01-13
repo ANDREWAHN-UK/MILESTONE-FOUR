@@ -114,8 +114,8 @@ def create_review(request):
     if request.method == 'POST':
         form = ReviewForm(request.POST, request.FILES)
         if form.is_valid():
-            product = form.save()
-            messages.success(request, f'Thanks for your review!')
+            review = form.save()
+            messages.success(request, f'Thanks for reviewing {review.product}!')
             return redirect(reverse('store'))
         else:
             messages.error(
