@@ -158,7 +158,8 @@
   /* thumbnail affects the images in the store and the cart etc, intended to create uniformity, regardless of image variation. */
   
   .thumbnail {
-    width: 200px;
+    width: 100%;
+    min-width: 200px; 
     height: 200px;
     box-shadow: -1px -3px 5px -2px rgba(214, 214, 214, 1);
     padding-left: 10px;
