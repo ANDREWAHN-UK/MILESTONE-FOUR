@@ -1,0 +1,96 @@
+<!-- this is where the products are displayed -->
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+
+  <div class="row">
+    {% for product in products %}
+
+    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+
+      <div class="card h-100 border-0">
+        <div class="card-header bg-transparent border-success">
+          {{product.name}}
+        </div>
+        <!-- NB the below references the property decorator found in store/models.py, and NOT the static/images folder as is more conventional -->
+        <!-- the reason for this is to work around having a faulty image. -->
+        <!-- Using direct linkage to the static/images was resulting in an app crash if there  was a missing/faulty image  -->
+        <a href="{% url 'product_detail' product.id %}">
+          <img src="{{product.imageURL}}" class="card-img-top thumbnail" alt="...">
+        </a>
+
+        <div class="card-body">
+
+          <p class="mb-3">
+            {{ product.description}}
+          </p>
+          <!-- Add to wishlist form -->
+          <form class="form update-form text-center" method="POST" action="{% url 'add_to_wishlist' product.id %}">
+            {% csrf_token %}
+            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+            <button class="btn btn-black rounded-0 text-uppercase mt-5 mb-1">Add to wishlist <i
+                class="far fa-heart pulsate-heart"></i></button>
+          </form>
+
+
+          <div>
+            <h4></h4><strong>£{{product.price|floatformat:2}}</strong></h4>
+          </div>
+        </div>
+
+        <div class="card-footer bg-transparent border-success">
+          {% if product.category %}
+          <p class="small mt-1 mb-0">
+            <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+              <i class="fas fa-tag mr-1"></i>{{ product.category}}
+            </a>
+          </p>
+          {% endif %}
+          <!-- Super user/store owner options -->
+          {% if request.user.is_superuser %}
+          <small class="ml-3">
+            <a href="{% url 'edit_product' product.id %}">Edit</a> |
+            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+          </small>
+          {% endif %}
+          {% if product.rating %}
+          <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+          {% else %}
+          <small class="text-muted">No Rating</small>
+          {% endif %}
+        </div>
+      </div>
+
+    </div>
+    <!----- Product Display Counter ----->
+    {% if forloop.counter|divisibleby:1 %}
+    <div class="col-12 d-sm-none mb-5">
+      <hr>
+    </div>
+    {% endif %}
+    {% if forloop.counter|divisibleby:2 %}
+    <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+      <hr>
+    </div>
+    {% endif %}
+    {% if forloop.counter|divisibleby:3 %}
+    <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+      <hr>
+    </div>
+    {% endif %}
+    {% if forloop.counter|divisibleby:4 %}
+    <div class="col-12 d-none d-xl-block mb-5">
+      <hr>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+
+
+</div>
+
+
+{% endblock %}
