@@ -90,7 +90,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="">Burger Menu</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'store' %}">Burger Menu</a>
 
                     </li>
 
@@ -102,10 +102,10 @@
                         <ul class="dropdown-menu" id="dropdown-menu-two" aria-labelledby="navbarDropdownMenuLink-two">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
-                            <a href="" class="dropdown-item">Product Management</a>
+                            <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                             {% endif %}
                             <li><a class="dropdown-item" href="{% url 'profile' %}">Manage Profile</a></li>
-                            <li><a class="dropdown-item" href="">Log Out</a></li>
+                            <li><a class="dropdown-item" href="{% url 'account_logout' %}">Log Out</a></li>
                             <li><a class="dropdown-item" href="">Review a Burger</a></li>
                             <li><a class="dropdown-item" href="">Go to wishlist</a></li>
                             {% else %}
@@ -115,7 +115,7 @@
                         </ul>
                     </li>
                     <li class="list-inline-item">
-                        <a class="nav-link active text-center" href="{% url 'wishlist' %}">
+                        <a class="nav-link active text-center" href="">
                                 <i class="fas fa-heart fa-lg pulsate-heart"></i>                               
                         </a>
                     </li>
