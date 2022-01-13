@@ -28,7 +28,7 @@
             {{ product.description}}
           </p>
           <!-- Add to wishlist form -->
-          <form class="form update-form text-center" method="POST" action="{% url 'add_to_wishlist' product.id %}">
+          <form class="form update-form text-center" method="POST" action="">
             {% csrf_token %}
             <input type="hidden" name="redirect_url" value="{{ request.path }}">
             <button class="btn btn-black rounded-0 text-uppercase mt-5 mb-1">Add to wishlist <i
