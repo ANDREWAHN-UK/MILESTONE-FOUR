@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'store',
+    'cart',
     'crispy_forms',  # to make forms easier to format using bootstrap
     'django.contrib.sites',  # allauth
     'allauth',  # allauth
