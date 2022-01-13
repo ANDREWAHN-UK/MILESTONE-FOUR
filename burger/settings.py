@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
+    'store',
     'crispy_forms',  # to make forms easier to format using bootstrap
     'django.contrib.sites',  # allauth
     'allauth',  # allauth

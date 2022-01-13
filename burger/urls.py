@@ -21,6 +21,7 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
+    path('store/', include('store.urls')),
     path('accounts/', include('allauth.urls')),
 ]
 #  the below tells the project that images can be accessed with a url
