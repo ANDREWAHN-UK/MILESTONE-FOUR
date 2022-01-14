@@ -23,6 +23,9 @@ urlpatterns = [
     path('', include('home.urls')),
     path('store/', include('store.urls')),
     path('cart/', include('cart.urls')),
+    path('checkout/', include('checkout.urls')),
+    path('profile/', include('profiles.urls')),
+    path('wishlist/', include('wishlist.urls')),
     path('accounts/', include('allauth.urls')),
 ]
 #  the below tells the project that images can be accessed with a url
