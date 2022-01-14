@@ -141,7 +141,7 @@ class ReviewUpdateView(UpdateView):
         'body',
         'rating',
         )
-    success_url = reverse_lazy('store')
+    success_url = reverse_lazy('view_reviews')
 
 class ReviewDeleteView(DeleteView):
     model = Review
