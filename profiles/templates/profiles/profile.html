@@ -21,7 +21,7 @@
             <p>Hello {{ user.username }}. How are you today?</p>
         </div>
     </div>
-    
+
 
     <div class="row">
         <div class="col-12 col-lg-6">
@@ -75,10 +75,16 @@
     <div class="row">
         <div class="col-12 col-lg-6">
             <p class="text-muted text-center">My Wishlist</p>
-            <a href="{% url 'wishlist' %}" class="btn btn-primary rounded-0 text-uppercase float-right">Go to Wishlist</a>
+            <p>Because wishes can come true</p>
+            <a href="{% url 'wishlist' %}" class="btn btn-primary rounded-0 text-uppercase float-right">Go to
+                Wishlist</a>
         </div>
         <div class="col-12 col-lg-6">
-            <p class="text-muted text-center">My Reviews</p>
+            <p class="text-muted text-center">Reviews</p>
+            <p>If you are the review author, you can edit or delete it by clicking below</p>
+            <a href="{% url 'view_reviews' %}" class="btn btn-primary rounded-0 text-uppercase float-right">Go to
+                The Reviews</a>
+
         </div>
     </div>
 </div>
