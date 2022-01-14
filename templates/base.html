@@ -107,10 +107,12 @@
                             <li><a class="dropdown-item" href="">Manage Profile</a></li>
                             <li><a class="dropdown-item" href="{% url 'account_logout' %}">Log Out</a></li>
                             <li><a class="dropdown-item" href="{% url 'review_new' %}">Review a Burger</a></li>
+                            <li><a class="dropdown-item" href="{% url 'view_reviews' %}">Read all reviews</a></li>
                             <li><a class="dropdown-item" href="">Go to wishlist</a></li>
                             {% else %}
                             <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
                             <li><a class="dropdown-item" href="{% url 'account_login' %}">Log In</a></li>
+                            <li><a class="dropdown-item" href="{% url 'view_reviews' %}">Read all reviews</a></li>
                             {% endif %}
                         </ul>
                     </li>
