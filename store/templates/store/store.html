@@ -59,7 +59,7 @@
           {% if product.rating %}
           <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
           <small class="ml-3">
-            <a class="text-danger" href="{% url 'review' %}">Reviews</a>
+            <a class="text-danger" href="{% url 'view_reviews' %}">Reviews</a>
           </small>
           {% else %}          
           <small class="text-muted">No Rating</small>

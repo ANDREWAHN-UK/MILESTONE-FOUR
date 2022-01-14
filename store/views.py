@@ -8,6 +8,7 @@ from django.views.generic.edit import (
     UpdateView, DeleteView, CreateView
 )
 
+from django.urls import reverse_lazy
 # Create your views here.
 
 def store(request):
@@ -112,38 +113,12 @@ def review(request):
     return render(request, 'store/reviews.html', context)
 
 
-# def create_review(request):
-#     """create a review for the store """
-
-#     if request.method == 'POST':
-#         form = ReviewForm(request.POST, request.FILES)
-#         if form.is_valid():
-#             review = form.save()
-#             messages.success(
-#                 request,
-#                 f'Thanks for reviewing {review.product}!'
-#                 )
-#             return redirect(reverse('store'))
-#         else:
-#             messages.error(
-#                 request, 'Failed to review product. Is the form valid?'
-#                 )
-#     else:
-#         form = ReviewForm()
-#     template = 'store/create_review.html'
-#     context = {
-#         'form': form,
-#     }
-
-#     return render(request, template, context)
-
 class ReviewCreateView(CreateView):
     model = Review
-    template_name = 'store/create_review.html'
+    template_name = 'store/review_create.html'
     fields = (
         'title',
         'product',
-        # 'author',
         'body',
         'rating',
         )
@@ -151,3 +126,22 @@ class ReviewCreateView(CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
+    # nb, setting the form instance author above to self.request.user 
+    # means the author is automatically the logged in user. 
+    # For it to work, the author field must be removed from the fields settings
+
+class ReviewUpdateView(UpdateView):
+    model = Review
+    template_name = 'store/review_edit.html'
+    fields = (
+        'title',
+        'product',
+        'body',
+        'rating',
+        )
+    success_url = reverse_lazy('view_reviews')
+    
+class ReviewDeleteView(DeleteView):
+    model = Review
+    template_name = 'store/review_delete.html'
+    success_url = reverse_lazy('view_reviews')
