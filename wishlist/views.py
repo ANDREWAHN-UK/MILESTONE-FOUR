@@ -69,7 +69,7 @@ def add_to_wishlist(request, product_id):
         existingWishlistItem = WishlistItem.objects.filter(
             wishlist=wishlist_user, product=product).exists()
         if existingWishlistItem:
-            messages.error(request, "Item already in your wishlist")
+            messages.error(request, f'{product.name} already in your wishlist!')
             return redirect(redirect_url)
 
         else:
@@ -79,7 +79,7 @@ def add_to_wishlist(request, product_id):
                 date_added=timezone.now()
                 )
             added_item.save()
-            messages.success(request, "Product added to your wishlist")
+            messages.success(request, f'{product.name} added to your wishlist!')
             return redirect(redirect_url)
     else:
         messages.error(request, "Click 'Add to wishlist' to add a item ")
