@@ -1,5 +1,7 @@
 from django.urls import path, include
 from . import views
+from .views import *
+
 
 urlpatterns = [
     path('store/', views.store, name='store'),
@@ -11,6 +13,7 @@ urlpatterns = [
         views.delete_product,
         name='delete_product'
         ),
-    path('create/', views.create_review, name='create_review'),
-    path('view/', views.review, name='review'),
+    # path('create/', views.create_review, name='create_review'),
+    path('new/', views.review, name='reviews'),
+    path('new/', ReviewCreateView.as_view(), name='review_new'),
     ]

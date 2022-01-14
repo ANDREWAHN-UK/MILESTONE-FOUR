@@ -9,11 +9,14 @@
             <div class="card h100" style="width: 18rem;">
                 <img src="{{review.product.imageURL}}" class="card-img-top thumbnail" alt="...">
                 <div class="card-body">
-                    <h3 class="card-title">{{review.product}}</h3>
-                  <h3 class="card-title">{{review.name}}</h5>
-                    <p>Reviewed by <strong>{{review.user}}</strong></p>
+                    <h5 class="card-title">Review of {{review.product}} </h5>
+                    <p>by <strong>{{review.author}}</strong></p>
+                    
+                    <h6 class="card-title">Summary: {{review.title}}</h6>
+                
+                    
                   
-                  <p class="card-text">{{review.content}}</p>
+                  <p class="card-text">{{review.body}}</p>
                   <p>{{review.rating}}/5 stars</p>
                   <a href="{% url 'store' %}" class="btn btn-primary">Back to the store</a>
                 </div>

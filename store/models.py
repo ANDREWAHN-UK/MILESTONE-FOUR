@@ -26,7 +26,7 @@ class Product(models.Model):
     price = models.DecimalField(
         max_digits=9,
         decimal_places=2
-        ) 
+        )
     image = models.ImageField(null=True, blank=True)
     quantity = models.IntegerField() 
     description = models.TextField() 
@@ -58,7 +58,15 @@ class Review(models.Model):
     class Meta:
         ordering = ['-date_added']
         verbose_name_plural = 'Product Reviews'
+    title = models.CharField(max_length=254)
+    product = models.ForeignKey(Product, related_name='reviews', null=True,
+                                blank=True, on_delete=models.SET_NULL)
 
+    author = models.ForeignKey(User, null=True, blank=True,
+                               on_delete=models.CASCADE)                            
+    body = models.TextField()
+    date_added = models.DateTimeField(auto_now_add=True)
+    
     rating_selection = (
         (1, '1'),
         (2, '2'),
@@ -66,15 +74,12 @@ class Review(models.Model):
         (4, '4'),
         (5, '5'),
     )
-
-    product = models.ForeignKey(Product, related_name='reviews', null=True,
-                                blank=True, on_delete=models.SET_NULL)
-    user = models.ForeignKey(User, null=True, blank=True,
-                             on_delete=models.CASCADE)
-    title = models.CharField(max_length=254)
-    content = models.TextField()
+       
     rating = models.IntegerField(choices=rating_selection, default=5)
-    date_added = models.DateTimeField(auto_now_add=True)
-
+        
     def __str__(self):
         return self.title
+    
+    def get_absolute_url(self):
+        return reverse('reviews', kwargs={'pk': self.pk})
+        

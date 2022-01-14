@@ -4,6 +4,9 @@ from .forms import ProductForm, ReviewForm
 
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.views.generic.edit import (
+    UpdateView, DeleteView, CreateView
+)
 
 # Create your views here.
 
@@ -103,29 +106,48 @@ def delete_product(request, product_id):
 
 
 def review(request):
+    """this is to display all reviews"""
     reviews = Review.objects.all()
     context = {'reviews': reviews}
     return render(request, 'store/reviews.html', context)
 
 
-def create_review(request):
-    """create a review for the store """
+# def create_review(request):
+#     """create a review for the store """
 
-    if request.method == 'POST':
-        form = ReviewForm(request.POST, request.FILES)
-        if form.is_valid():
-            review = form.save()
-            messages.success(request, f'Thanks for reviewing {review.product}!')
-            return redirect(reverse('store'))
-        else:
-            messages.error(
-                request, 'Failed to review product. Is the form valid?'
-                )
-    else:
-        form = ReviewForm()
-    template = 'store/create_review.html'
-    context = {
-        'form': form,
-    }
+#     if request.method == 'POST':
+#         form = ReviewForm(request.POST, request.FILES)
+#         if form.is_valid():
+#             review = form.save()
+#             messages.success(
+#                 request,
+#                 f'Thanks for reviewing {review.product}!'
+#                 )
+#             return redirect(reverse('store'))
+#         else:
+#             messages.error(
+#                 request, 'Failed to review product. Is the form valid?'
+#                 )
+#     else:
+#         form = ReviewForm()
+#     template = 'store/create_review.html'
+#     context = {
+#         'form': form,
+#     }
 
-    return render(request, template, context)
+#     return render(request, template, context)
+
+class ReviewCreateView(CreateView):
+    model = Review
+    template_name = 'store/create_review.html'
+    fields = (
+        'title',
+        'product',
+        # 'author',
+        'body',
+        'rating',
+        )
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
