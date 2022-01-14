@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<div class="container-fluid">
+<div class="container">
     <div class="row">
         <!-- Product Image -->
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
@@ -84,13 +84,53 @@
                 <span class="text-uppercase">Back to the Menu</span>
             </a>
         </div>
+
+
+    </div>   
+    <div class="row">
+
+     
+        <h1 class="text-center underline">Reviews of {{ product.name }}</h1>
+
+        {% for review in product.reviews.all %}
+        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 ">
+            
+            <div class="card h-100 border-0" >
+                <img src="{{review.imageURL}}" class="card-img-top thumbnail" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Review of {{review.product}} </h5>
+                    <p>by <strong>{{review.author}}</strong></p>
+                    
+                    <h6 class="card-title">Summary: {{review.title}}</h6>
+                
+                    
+                  
+                  <p class="card-text">{{review.body}}</p>
+                  <p>{{review.rating}}/5 stars</p>
+                  {% if review.author == request.user or request.user.is_superuser %}
+                  <small class="ml-3">
+                    <a href="{% url 'review_edit' review.pk %}">Edit</a> |
+                    <a class="text-danger" href="{% url 'review_delete' review.pk %}">Delete</a>
+                  </small>
+                  {% endif %}
+                  <a href="{% url 'store' %}" class="btn btn-primary">Back to the store</a>
+                </div>
+            </div>
+            
+        </div>
+
+       {% endfor%}
+        
     </div>
+     
 </div>
 
-{% endblock %}
+
 <!-- the block below must come infront of the final endblock -->
 {% block postloadjs %}
 <!-- block.super is used to deconflict the postload js stuff from base.html -->
 {{ block.super }}
-<script src="{% static 'scripts/cart_quantity.js' %}"></script>
+<script src="{% static 'script/cart_quantity.js' %}"></script>
+{% endblock %}
+
 {% endblock %}

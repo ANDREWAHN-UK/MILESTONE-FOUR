@@ -119,6 +119,7 @@ class ReviewCreateView(CreateView):
     fields = (
         'title',
         'product',
+        'image',
         'body',
         'rating',
         )
@@ -136,12 +137,13 @@ class ReviewUpdateView(UpdateView):
     fields = (
         'title',
         'product',
+        'image',
         'body',
         'rating',
         )
-    success_url = reverse_lazy('view_reviews')
-    
+    success_url = reverse_lazy('store')
+
 class ReviewDeleteView(DeleteView):
     model = Review
     template_name = 'store/review_delete.html'
-    success_url = reverse_lazy('view_reviews')
+    success_url = reverse_lazy('store')

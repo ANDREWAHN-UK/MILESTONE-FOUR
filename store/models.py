@@ -30,14 +30,16 @@ class Product(models.Model):
     image = models.ImageField(null=True, blank=True)
     quantity = models.IntegerField() 
     description = models.TextField() 
-    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    rating = models.DecimalField(
+        max_digits=6, decimal_places=2, null=True, blank=True
+        )
     
     #  ManyToMany means each product can be in several categories 
     categories = models.ManyToManyField(Category) 
  
     class Meta: 
-        db_table = 'products' 
- 
+        db_table = 'products'
+
     def __str__(self):
         return self.name
     
@@ -63,7 +65,8 @@ class Review(models.Model):
                                 blank=True, on_delete=models.SET_NULL)
 
     author = models.ForeignKey(User, null=True, blank=True,
-                               on_delete=models.CASCADE)                            
+                               on_delete=models.CASCADE)
+    image = models.ImageField(null=True, blank=True)
     body = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
     
@@ -80,6 +83,14 @@ class Review(models.Model):
     def __str__(self):
         return self.title
     
+    @property
+    def imageURL(self):
+        try:
+            url = self.image.url
+        except:
+            url = ''
+        return url
+        
     def get_absolute_url(self):
-        return reverse('reviews', kwargs={'pk': self.pk})
+        return reverse('view_reviews')
         
