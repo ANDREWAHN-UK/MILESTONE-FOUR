@@ -1,0 +1,55 @@
+from django.shortcuts import render, get_object_or_404
+from django.contrib import messages
+from .models import UserProfile
+
+from .forms import UserProfileForm
+from checkout.models import Order
+from django.contrib.auth.decorators import login_required
+
+# Create your views here.
+
+# Below based on CI Profile Video - Part 4 and 5
+@login_required
+def profile(request):
+    """ Display the user's profile. """
+    profile = get_object_or_404(UserProfile, user=request.user)
+
+    # the below allows users to update their delkivery details in their profile page - working
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST, instance=profile)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Profile updated successfully')
+        else:
+            messages.error(request, 'Update failed. Please ensure the form is valid.')
+    else:
+        form = UserProfileForm(instance=profile)
+    orders = profile.orders.all()
+
+    template = 'profiles/profile.html'
+    context = {
+        'form': form,
+        'orders': orders,
+        'on_profile_page': True
+    }
+
+    return render(request, template, context)
+
+
+# Below based on CI Profile Video - Part 7
+
+def order_history(request, order_number):
+    order = get_object_or_404(Order, order_number = order_number)
+
+    messages.info(request, (
+        f'This is confirmation for order number {order_number}. A confirmation email was sent when the order was placed'
+    ))
+
+    template = 'checkout/checkout_success.html'
+
+    context = {
+        'order':order,
+        'from_profile': True,
+    }
+
+    return render(request, template, context)
