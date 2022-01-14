@@ -14,7 +14,7 @@ def profile(request):
     """ Display the user's profile. """
     profile = get_object_or_404(UserProfile, user=request.user)
 
-    # the below allows users to update their delkivery details in their profile page - working
+    # the below allows users to update their delivery details in their profile page - working
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
@@ -39,16 +39,17 @@ def profile(request):
 # Below based on CI Profile Video - Part 7
 
 def order_history(request, order_number):
-    order = get_object_or_404(Order, order_number = order_number)
+    order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(request, (
-        f'This is confirmation for order number {order_number}. A confirmation email was sent when the order was placed'
+        f'This is confirmation for order number {order_number}.'
+        ' A confirmation email was sent when the order was placed'
     ))
 
     template = 'checkout/checkout_success.html'
 
     context = {
-        'order':order,
+        'order': order,
         'from_profile': True,
     }
 
