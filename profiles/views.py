@@ -9,6 +9,8 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 # Below based on CI Profile Video - Part 4 and 5
+
+
 @login_required
 def profile(request):
     """ Display the user's profile. """
