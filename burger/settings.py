@@ -145,15 +145,15 @@ WSGI_APPLICATION = 'burger.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-DATABASES = {
-      'default': dj_database_url.parse('postgres://mvrkdmpqdtrlfg:ff2a37df57ecae6f29978ba1671e3776ca384958c5a1d8393555b145b5df2718@ec2-34-242-89-204.eu-west-1.compute.amazonaws.com:5432/d4e1b3ste5ugq6')
-}
+# DATABASES = {
+#       'default': dj_database_url.parse('postgres://mvrkdmpqdtrlfg:ff2a37df57ecae6f29978ba1671e3776ca384958c5a1d8393555b145b5df2718@ec2-34-242-89-204.eu-west-1.compute.amazonaws.com:5432/d4e1b3ste5ugq6')
+# }
 
 
 # if 'DATABASE_URL' in os.environ:
-#     DATABASES = {
-#         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-#     }
+DATABASES = {
+      'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+}
 # else:
 #     DATABASES = {
 #         'default': {
