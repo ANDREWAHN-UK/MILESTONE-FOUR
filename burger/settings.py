@@ -30,7 +30,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env.bool('DEBUG', default=False)
+# DEBUG = env.bool('DEBUG', default=False)
+
+DEBUG = os.environ.get('DEVELOPMENT')
 
 ALLOWED_HOSTS = ['milestone-four-andrew.herokuapp.com', 'localhost']
 
