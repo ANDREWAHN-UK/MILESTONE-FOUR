@@ -139,28 +139,20 @@ WSGI_APPLICATION = 'burger.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#          'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-DATABASES = {
-      'default': dj_database_url.parse('postgres://mvrkdmpqdtrlfg:ff2a37df57ecae6f29978ba1671e3776ca384958c5a1d8393555b145b5df2718@ec2-34-242-89-204.eu-west-1.compute.amazonaws.com:5432/d4e1b3ste5ugq6')
-}
 
 
-# if 'DATABASE_URL' in os.environ:
-#     DATABASES = {
-#         'default': dj_database_url.parse(env.str('DATABASE_URL'))
-#     }
-# else:
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.sqlite3',
-#             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#         }
-#     }
+
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse('postgres://mvrkdmpqdtrlfg:ff2a37df57ecae6f29978ba1671e3776ca384958c5a1d8393555b145b5df2718@ec2-34-242-89-204.eu-west-1.compute.amazonaws.com:5432/d4e1b3ste5ugq6')
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
