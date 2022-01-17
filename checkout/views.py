@@ -13,6 +13,9 @@ from profiles.forms import UserProfileForm
 from django.conf import settings
 from django.views.decorators.http import require_POST
 import json
+
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
 # this is based on CI Checkout Videos- Part 5
 
 def checkout(request):
@@ -106,7 +109,22 @@ def checkout(request):
             order_form = OrderForm()
     else:
         order_form = OrderForm()
-    
+    if order_form.is_valid:
+        """Send the user a confirmation email"""
+        cust_email = order.email
+        subject = render_to_string(
+            'checkout/confirmation_emails/confirmation_email_subject.txt',
+            {'order': order})
+        body = render_to_string(
+            'checkout/confirmation_emails/confirmation_email_body.txt',
+            {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+        
+        send_mail(
+            subject,
+            body,
+            settings.DEFAULT_FROM_EMAIL,
+            [cust_email]
+        )   
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
@@ -130,6 +148,8 @@ def checkout_success(request, order_number):
         order.user_profile = profile
         order.save()
 
+    
+
         # Save the user's info. I.E. what the user enters in the form on the checkout page, but only if the save box is ticked
     if save_info:
         profile_data = {
@@ -144,7 +164,8 @@ def checkout_success(request, order_number):
         user_profile_form = UserProfileForm(profile_data, instance=profile)
         if user_profile_form.is_valid():
             user_profile_form.save()
-
+            
+        
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
