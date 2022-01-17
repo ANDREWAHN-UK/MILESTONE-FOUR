@@ -10,28 +10,33 @@
     <!-- If another left slide is added, it needs to inversely match the right side -->
     <div class="left-slide">
         <div class="left-1">
-            {% if request.user.is_authenticated %}
-            <p>
-                Welcome back {{ user.username }}.
-            </p>
-            <p>What burger would you like today?</p>
-            {% else %}
-            Get Your first burger for free!
+            <div> {% if request.user.is_authenticated %}
+                <p>
+                    Welcome back {{ user.username }}.
+                </p>
+                <p>What burger would you like today?</p>
+                {% else %}
+                Get Your first burger for free!
 
 
-            <button class="btn btn-black rounded-0 text-uppercase mt-0 mb-0"><a href="{% url 'account_signup' %}">Sign up here.</a></button>
-            <button class="btn btn-black rounded-0 text-uppercase mt-0 mb-0"><a href="{% url 'account_login' %}">Log in here.</a></button>
-            {% endif %}
+                <button class="btn btn-black rounded-0 text-uppercase mt-0 mb-0"><a href="{% url 'account_signup' %}">Sign up here.</a></button>
+                <button class="btn btn-black rounded-0 text-uppercase mt-0 mb-0"><a href="{% url 'account_login' %}">Log
+                        in here.</a></button>
+                {% endif %}
+            </div>
+
             <br>
             <br>
             <br>
             <br>
+            <div>
+                <h1>The Frenchie<i class="fas fa-arrow-right"></i></a>
+                </h1>
 
-            <h1>The Frenchie<i class="fas fa-arrow-right"></i></a>
-            </h1>
+                <p>Liberté, egalite, fraternité, hamburger!</p>
+                <button><a href="{% url 'store'  %}">Go to the menu</a></button>
+            </div>
 
-            <p>Liberté, egalite, fraternité, hamburger!</p>
-            <button><a href="{% url 'store'  %}">Go to the menu</a></button>
         </div>
         <div class="left-2">
             {% if request.user.is_authenticated %}
@@ -43,8 +48,10 @@
             Get Your first burger for free!
 
 
-            <button class="btn btn-black rounded-0 text-uppercase mt-0 mb-0"><a href="{% url 'account_signup' %}">Sign up here.</a></button>
-            <button class="btn btn-black rounded-0 text-uppercase mt-0 mb-0"><a href="{% url 'account_login' %}">Log in here.</a></button>
+            <button class="btn btn-black rounded-0 text-uppercase mt-0 mb-0"><a href="{% url 'account_signup' %}">Sign
+                    up here.</a></button>
+            <button class="btn btn-black rounded-0 text-uppercase mt-0 mb-0"><a href="{% url 'account_login' %}">Log in
+                    here.</a></button>
             {% endif %}
             <br>
             <br>
@@ -53,10 +60,13 @@
 
             <h1>The Nadz<i class="fas fa-arrow-right"></i></a>
             </h1>
-
             <p>Our <strong>towering</strong> achievement</p>
             <button><a href="{% url 'store'  %}">Go to the menu</a></button>
             <h1></h1>
+            <br>
+            <br>
+            <br>
+            <br>
 
         </div>
         <div class="left-3">
@@ -69,8 +79,10 @@
             Get Your first burger for free!
 
 
-            <button class="btn btn-black rounded-0 text-uppercase mt-0 mb-0"><a href="{% url 'account_signup' %}">Sign up here.</a></button>
-            <button class="btn btn-black rounded-0 text-uppercase mt-0 mb-0"><a href="{% url 'account_login' %}">Log in here.</a></button>
+            <button class="btn btn-black rounded-0 text-uppercase mt-0 mb-0"><a href="{% url 'account_signup' %}">Sign
+                    up here.</a></button>
+            <button class="btn btn-black rounded-0 text-uppercase mt-0 mb-0"><a href="{% url 'account_login' %}">Log in
+                    here.</a></button>
             {% endif %}
             <br>
             <br>
@@ -95,8 +107,10 @@
             Get Your first burger for free!
 
 
-            <button class="btn btn-black rounded-0 text-uppercase mt-0 mb-0"><a href="{% url 'account_signup' %}">Sign up here.</a></button>
-            <button class="btn btn-black rounded-0 text-uppercase mt-0 mb-0"><a href="{% url 'account_login' %}">Log in here.</a></button>
+            <button class="btn btn-black rounded-0 text-uppercase mt-0 mb-0"><a href="{% url 'account_signup' %}">Sign
+                    up here.</a></button>
+            <button class="btn btn-black rounded-0 text-uppercase mt-0 mb-0"><a href="{% url 'account_login' %}">Log in
+                    here.</a></button>
             {% endif %}
             <br>
             <br>
@@ -118,8 +132,10 @@
             Get Your first burger for free!
 
 
-            <button class="btn btn-black rounded-0 text-uppercase mt-0 mb-0"><a href="{% url 'account_signup' %}">Sign up here.</a></button>
-            <button class="btn btn-black rounded-0 text-uppercase mt-0 mb-0"><a href="{% url 'account_login' %}">Log in here.</a></button>
+            <button class="btn btn-black rounded-0 text-uppercase mt-0 mb-0"><a href="{% url 'account_signup' %}">Sign
+                    up here.</a></button>
+            <button class="btn btn-black rounded-0 text-uppercase mt-0 mb-0"><a href="{% url 'account_login' %}">Log in
+                    here.</a></button>
             {% endif %}
             <br>
             <br>
