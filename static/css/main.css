@@ -257,6 +257,10 @@ button {
     padding: 15px;
 }
 
+.button-store {
+    border-radius: 40%;
+}
+
 button:hover {
     color: #222;
 }
@@ -760,7 +764,19 @@ a {
     }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 1200px) {
+    .slider-container .action-buttons button {
+        top: 45%;
+    }
+}
+
+@media (max-width: 900px) {
+    .slider-container .action-buttons button {
+        top: 45%;
+    }
+}
+
+@media (max-width: 800px) {
     .left-slide {
         width: 50%;
     }
@@ -784,30 +800,114 @@ a {
     }
 }
 
-@media (max-width: 320px) {
-    .left-slide {
-        width: 50%;
-    }
-
-    .right-slide {
-        width: 50%;
+@media (max-width: 550px) {
+    .slider-container .action-buttons button {
         left: 50%;
-    }
-
-    .left-slide h1 {
-        font-size: 12px;
-        margin-top: -75%;
+        top: 45%;
     }
 
     .left-slide p {
-        font-size: 10px;
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 450px) {
+    .slider-container .action-buttons button {
+        left: 50%;
+        top: 50%;
+    }
+
+    .left-slide h1 {
+        font-size: 24px;
+        margin-top: -350%;
+    }
+
+    .left-slide p {
+        font-size: 24px;
+        padding-left: 10px;
+    }
+
+    button {
+        background-color: #fff;
+        border: black;
+        color: #aaa;
+        cursor: pointer;
+        font-size: 12px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .left-slide h1 {
+        font-size: 20px;
+        margin-top: -300%;
+    }
+
+    .left-slide p {
+        font-size: 18px;
+        padding-left: 10px;
     }
 
     .slider-container .action-buttons button {
+        left: 50%;
+        top: 50%;
+    }
+}
 
+@media (max-width: 350px) {
+    .slider-container .action-buttons button {
         left: 50%;
         top: 25%;
+    }
+
+    .left-slide h1 {
+        font-size: 20px;
+        margin-top: -300%;
+        margin-left: -25px;
+    }
+
+    .left-slide p {
+        font-size: 20px;
+        padding-left: 10px;
 
     }
 
+    button {
+        background-color: #fff;
+        border: black;
+        color: #aaa;
+        cursor: pointer;
+        font-size: 12px;
+        padding: 15px;
+
+    }
+}
+
+@media (max-width: 300px) {
+    .slider-container .action-buttons button {
+        left: 50%;
+        top: 45%;
+    }
+
+    .left-slide h1 {
+        font-size: 20px;
+        margin-top: -400%;
+        margin-left: -25px;
+    }
+
+    .left-slide p {
+        font-size: 20px;
+        padding-left: 10px;
+
+    }
+
+    button {
+        background-color: #fff;
+        border: black;
+        color: #aaa;
+        cursor: pointer;
+        font-size: 12px;
+        padding: 10px;
+
+    }
 }
