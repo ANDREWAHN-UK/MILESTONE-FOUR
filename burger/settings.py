@@ -144,7 +144,7 @@ WSGI_APPLICATION = 'burger.wsgi.application'
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        'default': dj_database_url.parse('DATABASE_URL')
+        'default': dj_database_url.parse('postgres://qeewwjcokmpenn:4e65b80e4a2a09309d6f6b9c872129ada4e9d3ba904168194dc35b9e777cf677@ec2-52-51-155-48.eu-west-1.compute.amazonaws.com:5432/dau2efrl3sabag')
     }
 else:
     DATABASES = {
