@@ -37,7 +37,7 @@ DEBUG = env.bool('DEBUG', default=False)
 ALLOWED_HOSTS = ['milestone-four-andrew.herokuapp.com', 'localhost']
 
 # below to deal with csrf stuff
-CSRF_TRUSTED_ORIGINS = ['https://*.GITPOD.IO', 'https://*.8000']
+CSRF_TRUSTED_ORIGINS = ['https://*.GITPOD.IO', 'https://*.8000', 'https://milestone-four-andrew.herokuapp.com/']
 
 
 # Application definition
@@ -123,9 +123,6 @@ DEFAULT_FROM_EMAIL = 'slaine16@hotmail.com'
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-
-# EMAIL_HOST_USER = env.str('EMAIL_HOST_USER')
-# EMAIL_HOST_PASSWORD = env.str('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 
