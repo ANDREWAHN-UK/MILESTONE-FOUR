@@ -129,7 +129,7 @@ EMAIL_PORT = 587
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'  # allauth
 ACCOUNT_EMAIL_REQUIRED = True  # allauth
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory'  # allauth
+ACCOUNT_EMAIL_VERIFICATION = 'none'  # allauth
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True  # allauth
 ACCOUNT_USERNAME_MIN_LENGTH = 4  # allauth
 LOGIN_URL = '/accounts/login/'  # allauth
