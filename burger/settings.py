@@ -142,21 +142,19 @@ WSGI_APPLICATION = 'burger.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 
-# if 'DATABASE_URL' in os.environ:
-#     DATABASES = {
-#         'default': dj_database_url.parse('postgres://qeewwjcokmpenn:4e65b80e4a2a09309d6f6b9c872129ada4e9d3ba904168194dc35b9e777cf677@ec2-52-51-155-48.eu-west-1.compute.amazonaws.com:5432/dau2efrl3sabag')
-#     }
-# else:
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.sqlite3',
-#             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#         }
-#     }
-
-DATABASES = {
-        'default': env.dj_db_url('DATABASE_URL')
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse('postgres://qeewwjcokmpenn:4e65b80e4a2a09309d6f6b9c872129ada4e9d3ba904168194dc35b9e777cf677@ec2-52-51-155-48.eu-west-1.compute.amazonaws.com:5432/dau2efrl3sabag')
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
+    }
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
