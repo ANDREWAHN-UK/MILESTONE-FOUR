@@ -14,17 +14,33 @@ from django.conf import settings
 from django.views.decorators.http import require_POST
 import json
 
-from django.core.mail import send_mail
-from django.template.loader import render_to_string
+
+# the below based on CI Stripe Video 13
+
+@require_POST
+def cache_checkout_data(request):
+    stripe_secret_key = 'sk_test_51K8jexEE3VLVHzWcHSDIRoXnm3cGSze1zo4WDrHeSMwLQjO269ds452ALbYGlliIeTcdqzW7qEc82cOtrKUILdq100uvmXF6cq'
+    try:
+        pid = request.POST.get('client_secret').split('_secret')[0]
+        stripe.api_key = stripe_secret_key
+        stripe.PaymentIntent.modify(pid, metadata={
+            'cart': json.dumps(request.session.get('cart', {})),
+            'save_info': request.POST.get('save_info'),
+            'username': request.user,
+        })
+        return HttpResponse(status=200)
+    except Exception as e:
+        messages.error(request, 'Sorry, your payment cannot be \
+            processed right now. Please try again later.')
+        return HttpResponse(content=e, status=400)
+
 # this is based on CI Checkout Videos- Part 5
 
 def checkout(request):
-
     # trying to link the below to settings variables did not work
     # only worked when made visible here
     stripe_public_key = "pk_test_51K8jexEE3VLVHzWc8ckIVJpmSWAhlhOnT7nz8ioOry3z0atx9lyoXk3K2njUw23ZsTs21nofTig1QnoY31ni4H0s00njCJPUBc"
     stripe_secret_key = 'sk_test_51K8jexEE3VLVHzWcHSDIRoXnm3cGSze1zo4WDrHeSMwLQjO269ds452ALbYGlliIeTcdqzW7qEc82cOtrKUILdq100uvmXF6cq'
-
     
     if request.method == 'POST':
         cart = request.session.get('cart', {})
@@ -43,7 +59,11 @@ def checkout(request):
         order_form = OrderForm(form_data)
 
         if order_form.is_valid():
-            order = order_form.save()
+            order = order_form.save(commit=False)
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            order.stripe_pid = pid
+            order.original_cart = json.dumps(cart)
+            order.save()
             for item_id, item_data in cart.items():
                 try:
                     product = Product.objects.get(id=item_id)
@@ -109,22 +129,7 @@ def checkout(request):
             order_form = OrderForm()
     else:
         order_form = OrderForm()
-    if order_form.is_valid:
-        """Send the user a confirmation email"""
-        cust_email = order.email
-        subject = render_to_string(
-            'checkout/confirmation_emails/confirmation_email_subject.txt',
-            {'order': order})
-        body = render_to_string(
-            'checkout/confirmation_emails/confirmation_email_body.txt',
-            {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
-        
-        send_mail(
-            subject,
-            body,
-            settings.DEFAULT_FROM_EMAIL,
-            [cust_email]
-        )   
+    
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,

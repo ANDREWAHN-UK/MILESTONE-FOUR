@@ -123,6 +123,8 @@ DEFAULT_FROM_EMAIL = 'slaine16@hotmail.com'
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+# EMAIL_HOST_USER = env.str('EMAIL_HOST_USER')
+# EMAIL_HOST_PASSWORD = env.str('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 
@@ -146,7 +148,7 @@ WSGI_APPLICATION = 'burger.wsgi.application'
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        'default': dj_database_url.parse('postgres://mvrkdmpqdtrlfg:ff2a37df57ecae6f29978ba1671e3776ca384958c5a1d8393555b145b5df2718@ec2-34-242-89-204.eu-west-1.compute.amazonaws.com:5432/d4e1b3ste5ugq6')
+        'default': dj_database_url.parse('postgres://qeewwjcokmpenn:4e65b80e4a2a09309d6f6b9c872129ada4e9d3ba904168194dc35b9e777cf677@ec2-52-51-155-48.eu-west-1.compute.amazonaws.com:5432/dau2efrl3sabag')
     }
 else:
     DATABASES = {
@@ -201,6 +203,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STRIPE_CURRENCY = 'GBP'
+STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET')
 
 #  see CI Deployment videos for the below
 
