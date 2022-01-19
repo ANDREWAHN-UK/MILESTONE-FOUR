@@ -62,7 +62,7 @@ In a bricks and mortar establishment, it would work very well.
 *	Images – I sourced the images from google images, [Unsplash](https://unsplash.com/s/photos/burger), [Pixabay][https://pixabay.com/images/search/burger/), [Pxhere](https://pxhere.com/en/photos?q=burger&search=) and [Pexels](https://www.pexels.com/search/burger/)
 
  - - - - 
-**5.A Features and Structure:**
+**5.A Features:**
  - - - -
 1. Feature - Header/Navbar basic - to consist of links to:
 * the home page;
@@ -323,7 +323,7 @@ All done by me, with ideas and inspiration for input fields and layout from the 
 
  * [Unsplash](https://unsplash.com/s/photos/burger) for some of the images used.
  * [Google](https://www.google.com/)  for other images.
- * [Pixabay][https://pixabay.com/images/search/burger/) for some of the images used.
+ * [Pixabay](https://pixabay.com/images/search/burger/) for some of the images used.
  * [Pxhere](https://pxhere.com/en/photos?q=burger&search=) for some of the images used.
  * [Pexels](https://www.pexels.com/search/burger/) for some of the images used.
 
