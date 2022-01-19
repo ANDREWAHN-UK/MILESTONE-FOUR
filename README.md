@@ -1,108 +1,243 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Milestone Project Four
+![image](<a href="https://imgur.com/Ew5GK6g"><img src="https://i.imgur.com/Ew5GK6g.jpg" title="source: imgur.com" /></a>)
+ - - - -
 
-Welcome ANDREWAHN-UK,
+**Overview:**
+ - - - -
+- - - -
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+**1. Purpose of the project:**
+ - - - -
+This project is an e-commerce website created for educational purposes. The target audience is anyone who likes Hamburgers.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Simply put, this project came about because I like hamburgers, and have entertained the idea of a website/restaurant where someone could customise their burgers, and to broaden the concept of Hambirgers, away from the cheap/generic stuff like MacDonald's, and away from the pricey, not good value for money venues like Byron Burger. In other words, Subways, but for burgers, with a healthy dose of Hans Im Gluck (awesome German burger chain.)
 
-## Gitpod Reminders
+I enjoy making and eating hamburgers, and this is the sort of establishment I would patronise.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+The original plan was for a gamified burger creation, using Javascript, to mimic how in Subway you choose your base sub, then add whatever topping you want. Users would select a patty, then a bun. The complicatioon came in offering users the ability to select multiple patties, extra topping s etc - it quickly became obvious that there would be a huge amount of clicking, and the ensuing ordser would have been confusing to read, e.g. "3 patties, 1 blue cheese, 2 cheddar, brioche bun."
 
-`python3 -m http.server`
+This could still work, but I shelved that in favour of a simpler, easier to understand and, most importantly, easier to implement set menu.
 
-A blue button should appear to click: _Make Public_,
+In a bricks and mortar establishment, it would work very well.
 
-Another blue button should appear to click: _Open Browser_.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- - - - 
+**2. User Goals/stories**
+ - - - -
+1. As a **Potential Employer** for a Coding Role, I want to view Andrew’s website, to see how he performs as a Full stack developer. I want to be able to navigate the website and compare it to others, of similar scope.
+2. As a **Potential Employer** for a Coding Role, further to the above, I would be particularly interested in the use of Python and Django in this website.
+3. As a **site user**, I want to easily register for an account, so that I can have a personal account and view my profile.
+4. As a **site user**,  I want to have a profile, so that I can view my order history, delivery and payment details.
+5. As a **site user**, I want to be able to view other reviews.
+6. As a **site user**, I want to be able to create, update and delete my own reviews. 
+7. As a **shopper**, I want to be able to view a list of burgers, so I can choose one/many.
+8. As a **shopper**, I want to be able to view my shopping bag/cart, so I can keep track of my order and cost, and adjust quantities etc
+9. As a **shopper**, I want to be able to view pay without any fuss, so I can check out quickly, and get my burgers
+10. As a **shopper**, I want a record of orders placed
+11. As a **shopper**, I want my payment info to be securely kept, so I do not need to worry about safety.
+12. As a **shopper**, I want to be able to store interesting products in a wishlist, which I can view later and from which I can purchase items.
+13. As an **store owner/super user** I want to be able to update and delete other peoples' reviews and profiles.
+14. As an **store owner/super user** , I want to be able to add new products, so I can take advantage of market trends and holiday specials. E.G. there is a burger here called the Eirann, which I put in as a St.Patrick's day idea, but I like the sound of it so much I put it as the very first thing users see.
+15. As an **store owner/super user** , I want to be able to edit/update products, for example using different images or adjusting the price.
+16. As an **store owner/super user** , I want to be able to delete products, if they are not selling.
+17. As an **store owner/super user** , I want to be able to access the database, so I can easily see what is (not) selling, and identify patterns/trends, e.g., many sales from a particular neighbourhood.
+18. As an **store owner/super user** , I want to be able to keep the site secure by only allowing authorised users to access certain areas of the site.
 
-A blue button should appear to click: _Make Public_,
+ - - - - 
+**3. Stakeholder Goals**
+ - - - -
 
-Another blue button should appear to click: _Open Browser_.
+ * To lead the user to create a profile 
+ * To lead the user to read and leave reviews.
+ * To lead the user to read and leave a wishlist.
+ * To lead the user to purchase items.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- - - - 
+**4. Typography and colour scheme:**
+ - - - -
+*	Font - Lato. For the simple reason that it worked well.
+*	Icons - very few icons were used here. I used font awesome for the icons.
+*	Colours – I want to emphasise Las Canteras beach, which means lots of sea and beach and sun related colours, and the national colours of the island are yellow, blue, and white. This review site is meant to complement an existing Airbnb listing, which has been decorated in …yellow, blue and white.
+*	Images – I sourced the images from google images, Unsplash and the official [Las Canteras beach website](https://www.hellocanaryislands.com/beaches/gran-canaria/las-canteras-beach/), as well as my own images.
 
-To log into the Heroku toolbelt CLI:
+ - - - - 
+**5. Features:**
+ - - - -
+1. Feature - Header/Navbar basic - to consist of links to the home page, reviews page, about page (a link to the Airbnb listing,) log in/register page (replaced by a log out link once the user is logged in) and user profile (shows once a user is logged in) 
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+Because this website is intended to be quite fun in its theming, the navbar is not at the top as is traditional, but comes in from the left, when the top left circle is clicked. This was intended as a bit of whimsy, and also to allow maximum use of the screen for beach themed images.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+2. Feature - Navbar plus – log out button to replace login/register, link to Profile Page, link to New Review 
 
-------
+3. Page - Homepage – with search functionality, clear images about Las Canteras, and some links to reviews page, about page (a link to the Airbnb listing,) log in/register page.
 
-## Release History
+4. Page - create and edit review page
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+5. Page - Log In / Registration Page – to register a user (updating the database) or log them in (checking the database)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+6. Page - User Profile Page – available once user logs in. This is where users can manipulate their data.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+7. Function – Create User
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+8. Function – Create Review
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+9. Function – Read Review
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+10. Function – Update Review
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+11. Function – Delete Review
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+12. Minimal Viable Project is :
+    1. Navbar basic
+    2. Homepage
+    3. Registration/ Log in page
+    4. User profile Page (once logged in)
+    5. Reviews page (i.e. view all reviews)
+    6. Create User function
+    7. (Create /Read /Update/ Delete) own Reviews function
+    8. Admin to be able to modify all reviews
+13. Future features/expanding the website :
+    1. This review focused website could form part of a larger website, intended to highlight the Airbnb listing itself, similar to how the neighbouring building has a [website](https://www.brisamarcanteras.com/) but lists everything through booking.com
+    2. The scope could expand to include places further from the beach
+    3. The scope could expand to include events, such as concerts at the nearby [auditorium](https://auditorioteatrolaspalmasgc.es/)
+    4. The website could be made available in other languages, such as German, Spanish or Russian, in order to better accomodate the variety of visitors and residents
+    5. The scope could be linked to another organisation
+    6. It would be very useful for users to pin the lkocation on a map, and/or, like with Trip Advisor, have the address of the place to hand
+    7. Relating to this last, it could be useful for each place to have its own mini page, like a modal, with reviews by various users linked to it
+    8. The ability for usersto upload their own images, and several of them, would be nice, and have these in a carousel within the review itself
+    9. A more fleshed out User Profile page, with the ability to edit it, and for others to be able to view it, in effect a very small, highly curated version of Facebook, focussed on the beach 
+    10. As part of a series I follow on [Udemy,](https://www.udemy.com/course/50-projects-50-days) to practice  HTML, CSS and JS, I created a [Cards website](https://github.com/ANDREWAHN-UK/CARDS), which I think could have worked quite well to display the reviews in their current form, once I got it to work (see Section 10 - Testing for more on this)
+    11. A search function for the Admin to go through Users could be helkpful, if the number of users increases significantly.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+- - - - 
+**6. Wireframes:**
+- - - -
+The wireframes can be accessed from the "wireframes" folder, and also directly here:
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+ [Wireframes file](https://github.com/ANDREWAHN-UK/Milestone-Three/blob/main/MS3.bmpr)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+ [Wireframes PDF](https://github.com/ANDREWAHN-UK/Milestone-Three/blob/main/MS3.pdf)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+- - - - 
+ **7. Technology.**
+- - - -
+Languages Used:
+ * HTML5
+ * CSS3
+ * JavaScript
+ * Python
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+Frameworks, Libraries & Programs Used:
+1.	Bootstrap 4.4.1:
+    *	Bootstrap was used to assist with the responsiveness and styling of the website.
 
-------
+2.	Flask:
+    *	Used to create the web app.
 
-## FAQ about the uptime script
+3.	Mongo dB:
+    *	Used to create the database.
 
-**Why have you added this script?**
+4.	Jinja:
+    *	Used for templating, for loops and conditionals within Flask.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+5.	Google Fonts:
+    *	Google fonts were used to import the 'Lato' font into the style.css file which is used on all pages throughout the project.
 
-**How will this affect me?**
+6.	Font Awesome:
+    *	Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+7.	jQuery:
+    *	jQuery came with Bootstrap to make the accordion work.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+8.	Swiper.js
+    *	This was used to make the images carousel.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+9.	GitPod
+    *	Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 
-**So….?**
+10.	GitHub:
+    *	GitHub is used to store the projects code after being pushed from Git.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+11.	Balsamiq:
+    *	Balsamiq was used to create the wireframes during the design process.
 
-**Can I opt out?**
+- - - - 
+**8. Testing.**
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+Please refer to the separate [TESTING.md](https://github.com/ANDREWAHN-UK/Milestone-Three/blob/main/TESTING.md) file.
+- - - - 
+**9. Deployment.**
+- - - - 
+The website has been deployed on
+  *	Heroku.
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+  9.1 Deploying to Heroku:
 
-**Anything more?**
+    1. You will need an account to sign up to [Heroku](https://www.heroku.com)
+    2. Once logged in click the create new app button
+    3. Select the region closest to you and give the APP a name. It is a good idea to name the App something similar to the Github repository which hosts the files.
+    4. You will see a navbar on Heroku, starting with Overview, and ending with settings. Click the 3rd button, deploy, and in the middle of the page, where it says "deployment method," select "Connect to Github."
+    5. Underneath that, with the tab labelled "Apps connected to GitHub," ensaure that your respository is selected.
+    6. Take note of the tab below , labelled automatic deploys. Do NOT click this yet.
+    7. First, go back to the navbar and click settings.
+    8. Then click "Reveal Config Vars"
+     9. Now fill in the fields, which need to be exactly as they are in your env.py file, minus the "". Be careful here.
+    10. Next, check your Procfile is set up correctly. It should read something like this: "web: python app.py"
+    11. Now, referring back to step 6, click enable automatic deploys
+    12. If done right, at the top right of the webpage, click "open app," and your website should deploy.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+ 9.2. Github.
 
----
+ Github is the preferred version control and hosting website of the Coding Academy. For this project, it is not used to deploy the website, but to host it. Therefore, previous advice  and steps regarding creating a fork/backup apply, see below.
 
-Happy coding!
+ **To create a fork/backup:**
+
+GitHub does not currently allow you to directly fork your own repo, but there is a workaround:
+
+  1.	make a note of the URL of your repo, e.g., "https://github.com/ANDREWAHN-UK/Milestone-Three"
+  2.	at the very top right of the page, next to your login image and the bell icon, there is a + button, click this.
+  3.	click "import repository”.
+  4.	Where it says, "Your old repository’s clone URL," put in the URL of your repository, e.g., "https://github.com/ANDREWAHN-UK/Milestone-Three"
+  5.	In the "repository name field" choose an appropriate name for your new repository
+  6.	Click "begin import"
+  7.	You now have a copy of your original repository, with all commit history and branches!
+
+However, be aware that this is not a real fork, and so you cannot do pull requests back and forth.
+
+Because this effectively clones the repo, I decided against using the actual clone feature, but information on that can be found [here:](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+
+- - - - 
+  **10. Credits**
+- - - - 
+**Code:** 
+Done by myself, with:
+ * some work done by [Bootstrap,](https://getbootstrap.com/) most notably using grids and columns, and the built in accordion feature.
+ * code from [swiper.js](https://swiperjs.com/get-started) for the carousel
+ * [Code Institute,](https://learn.codeinstitute.net/login?next=/dashboard) namely the Mini Project leading up to Milestone 3
+ * Code from Brian Traversy at [Udemy,](https://www.udemy.com/course/50-projects-50-days) "Rotating Navigation" project, namely the base of the navigation system, then heavily modifed for the site purposes
+ 
+
+**Content:**
+
+All done by me, with ideas and inspiration for input fields and layout from the following:
+ *	Code Institute slack community - seeing what people were doing for the 3rd Project was a very useful steer in terms of understanding the scope
+ *	[The Official Las Canteras website](https://www.hellocanaryislands.com/beaches/gran-canaria/las-canteras-beach/) - I considered it obligatory to have a look at what the official website considers important
+ *	[TripAdvisor](https://www.tripadvisor.co.uk/) - for ideas on creating the reviews section
+ *	[Airbnb](https://www.airbnb.co.uk/)		- for their guidebook feature which was the seed idea of this website
+
+**Media:**
+
+ * [Unsplash](https://unsplash.com/) for some of the images used.
+ * [Google](https://www.google.com/)  for other images.
+ * [My Listing](https://www.airbnb.co.uk/rooms/18222301)  for some of my own images, and my guidebook.
+ * [The Official Las Canteras website](https://www.hellocanaryislands.com/beaches/gran-canaria/las-canteras-beach/)  for some images
+
+
+
+**Acknowledgements:**
+* Code Institute slack community
+* Code Institute tutor support (whilst doing the build up lessons, I ran into some quite severe issues with using Python and Flask, that had I not fixed then, would have derailed the Project)
+* Code Institute mentor (Rohit Sharma)
+* [StackOverflow](https://stackoverflow.com/) - for various fixes
