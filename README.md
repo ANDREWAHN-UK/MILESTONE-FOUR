@@ -1,8 +1,9 @@
 # Milestone Project Four
-![image](<a href="https://imgur.com/Ew5GK6g"><img src="https://i.imgur.com/Ew5GK6g.jpg" title="source: imgur.com" /></a>)
+<a href="https://imgur.com/Ew5GK6g"><img src="https://i.imgur.com/Ew5GK6g.jpg" title="source: imgur.com" /></a>
  - - - -
 
-**Overview:**
+**Website:**
+You can view the deployed website [here](https://milestone-four-andrew.herokuapp.com/)
  - - - -
 - - - -
 
@@ -10,7 +11,7 @@
  - - - -
 This project is an e-commerce website created for educational purposes. The target audience is anyone who likes Hamburgers.
 
-Simply put, this project came about because I like hamburgers, and have entertained the idea of a website/restaurant where someone could customise their burgers, and to broaden the concept of Hambirgers, away from the cheap/generic stuff like MacDonald's, and away from the pricey, not good value for money venues like Byron Burger. In other words, Subways, but for burgers, with a healthy dose of Hans Im Gluck (awesome German burger chain.)
+Simply put, this project came about because I like hamburgers, and have entertained the idea of a website/restaurant where someone could customise their burgers, and to broaden the concept of Hambirgers, away from the cheap/generic stuff like MacDonald's, and away from the pricey, not good value for money venues like [Byron Burger](https://www.byron.co.uk/). In other words, Subways, but for burgers, with a healthy dose of [Hans Im Gluck (awesome German burger chain.)](https://hansimglueck-burgergrill.de/)
 
 I enjoy making and eating hamburgers, and this is the sort of establishment I would patronise.
 
@@ -55,70 +56,159 @@ In a bricks and mortar establishment, it would work very well.
 - - - - 
 **4. Typography and colour scheme:**
  - - - -
-*	Font - Lato. For the simple reason that it worked well.
+*	Font - Lato. For the simple reason that it worked well in previous projects, so I saw no need to deviate.
 *	Icons - very few icons were used here. I used font awesome for the icons.
-*	Colours – I want to emphasise Las Canteras beach, which means lots of sea and beach and sun related colours, and the national colours of the island are yellow, blue, and white. This review site is meant to complement an existing Airbnb listing, which has been decorated in …yellow, blue and white.
-*	Images – I sourced the images from google images, Unsplash and the official [Las Canteras beach website](https://www.hellocanaryislands.com/beaches/gran-canaria/las-canteras-beach/), as well as my own images.
+*	Colours – I want the focus to be on the products, so I used black, white and yellow for the header and footer, and white throughout most of the website. On the Homepage, I used colours appropriate to the burgers being highlighted, e.g. grey (representing urban)
+*	Images – I sourced the images from google images, [Unsplash](https://unsplash.com/s/photos/burger), [Pixabay][https://pixabay.com/images/search/burger/), [Pxhere](https://pxhere.com/en/photos?q=burger&search=) and [Pexels](https://www.pexels.com/search/burger/)
 
  - - - - 
-**5. Features:**
+**5.A Features and Structure:**
  - - - -
-1. Feature - Header/Navbar basic - to consist of links to the home page, reviews page, about page (a link to the Airbnb listing,) log in/register page (replaced by a log out link once the user is logged in) and user profile (shows once a user is logged in) 
+1. Feature - Header/Navbar basic - to consist of links to:
+* the home page;
+* the burger menu page; 
+* Profile management[(Product Management (for Super User); Manage Profile (logged in users); Log out (logged in users); Review a Burger (logged in users), Read All Reviews (all users), Go to Wishlist, Register and Log in (new/logged out users)]; 
+* the wishlist;
+* the cart, with a display of the £ amount so far
 
-Because this website is intended to be quite fun in its theming, the navbar is not at the top as is traditional, but comes in from the left, when the top left circle is clicked. This was intended as a bit of whimsy, and also to allow maximum use of the screen for beach themed images.
+The navbar is quite traditional, as the intent is to direct user attention to the products.
 
-2. Feature - Navbar plus – log out button to replace login/register, link to Profile Page, link to New Review 
+2. Feature - Footer – Link to Home Page, link to social media
 
-3. Page - Homepage – with search functionality, clear images about Las Canteras, and some links to reviews page, about page (a link to the Airbnb listing,) log in/register page.
-
-4. Page - create and edit review page
-
-5. Page - Log In / Registration Page – to register a user (updating the database) or log them in (checking the database)
-
-6. Page - User Profile Page – available once user logs in. This is where users can manipulate their data.
-
-7. Function – Create User
-
-8. Function – Create Review
-
-9. Function – Read Review
-
-10. Function – Update Review
-
-11. Function – Delete Review
-
-12. Minimal Viable Project is :
+3. Minimal Viable Project is :
     1. Navbar basic
     2. Homepage
-    3. Registration/ Log in page
+    3. Store page
     4. User profile Page (once logged in)
     5. Reviews page (i.e. view all reviews)
-    6. Create User function
+    6. Register/Login/Logout functionality
     7. (Create /Read /Update/ Delete) own Reviews function
     8. Admin to be able to modify all reviews
+    9. Checkout page with Stripe functioning
+    10. User notification of order placed
+    11. Order history
 13. Future features/expanding the website :
-    1. This review focused website could form part of a larger website, intended to highlight the Airbnb listing itself, similar to how the neighbouring building has a [website](https://www.brisamarcanteras.com/) but lists everything through booking.com
-    2. The scope could expand to include places further from the beach
-    3. The scope could expand to include events, such as concerts at the nearby [auditorium](https://auditorioteatrolaspalmasgc.es/)
-    4. The website could be made available in other languages, such as German, Spanish or Russian, in order to better accomodate the variety of visitors and residents
-    5. The scope could be linked to another organisation
-    6. It would be very useful for users to pin the lkocation on a map, and/or, like with Trip Advisor, have the address of the place to hand
-    7. Relating to this last, it could be useful for each place to have its own mini page, like a modal, with reviews by various users linked to it
-    8. The ability for usersto upload their own images, and several of them, would be nice, and have these in a carousel within the review itself
-    9. A more fleshed out User Profile page, with the ability to edit it, and for others to be able to view it, in effect a very small, highly curated version of Facebook, focussed on the beach 
-    10. As part of a series I follow on [Udemy,](https://www.udemy.com/course/50-projects-50-days) to practice  HTML, CSS and JS, I created a [Cards website](https://github.com/ANDREWAHN-UK/CARDS), which I think could have worked quite well to display the reviews in their current form, once I got it to work (see Section 10 - Testing for more on this)
-    11. A search function for the Admin to go through Users could be helkpful, if the number of users increases significantly.
+    1. Expand with different burgers
+    2. Add a blog feature, discussing, for example, how burger recipes are decided upon
+    3. Add a comments feature to the blog
+    4. Create a series of videos, to complement the blog, for use on Youtube, Facebook etc
+    5. Host competitions themed around burgers
+    6. Add an about us page
+    7. Add a contact us form
+    8. Add a page like pinterest or imgur, just for burger related (user submitted?) images
+    9. the Homepage is made statically, with the text side having to match the appropriate image. This could be done in Django, with, possibly (?) 2 for loops, one to go through the images and the other to go throw the descriptions. Can 2 for loops that reference the same model work?
+    10. A more fleshed out User Profile page, specifically with the user's reviews and wishlists viewable and editable directly from here, instead of the current links used. 
+    11. A search function for the Admin to go through Users, Reviews, Products could be helpful, if the number of users increases significantly.
+    12. Expand the wishlists so users can views those of other people.
+    
+ - - - - 
+**5.B  Structure:**
+ - - - -
 
+ Here follows a brief overview of each app within the website, with detail on the html pages and models used.
+1. Home App:
+* HTML files:
+  * home.html
+    * This is the landing page. The effect here is a vertical slider, to provide some interactivityas opposed to a more traditional and static Homepage. USers can click up or down, changing the images and the descriptive text of a selection of Hamburgers.
+* Models:
+    none
 
+    
+
+2. Store App:
+    * This main effort here is the store page, where users can select burgers and interact with review and wishlists.
+* HTML files:
+    * add_product.html:
+        * allows super users to add new products to the database
+
+    * edit_product.html:
+        * allows super users to edit existing products in the database
+
+    * product_detail.html:
+        * allows all users to brung up more information on the chosen burger, and to add a chosen quantity to the cart, and to add the burger to the wishlist
+
+    * review_create.html:
+        * allows registered users to write a review
+
+    * review_delete.html:
+        * allows users to delete their reviews, and super users to delete any review
+
+    * review_edit.html:
+        * allows users to edit their reviews, and super users to edit any review
+
+    * reviews.html:
+        * a page to hold all existing reviews. If the user is the author of a review (or is a superuser) this is where they can edit/delete reviews
+
+    * store.html:
+        * a page to display the products, where users can click on the image to bring up the product detail. On this page, users can add a product to their wishlist
+
+* Models:
+    * Category:
+        * stores the Product categories, which are for internal use, e.g. if something is a bun, a patty, cheese or a complete hamburger
+    
+    * Product:
+        * holds the information of what comprises a product here, which gets accessed elsewhere, e.g. product name and image, which are shown in store.html
+
+    * Review:
+        * A model of the review, with information to be displayed, such as the product being reviewed, the review author etc. 
+
+   
+
+3. Cart:
+    * The cart page acts as the nexus between the store app + pages and the checkout app + pages
+* HTML files:
+    
+    * cart.html
+        * allows users to view all items in their cart, and complete their purchase.NB there is also a template tag, labelled cart_tools.py, and a file labelled contexts.py, which are to allow cart functionality throughout the website
+* Models:
+    None
+
+    
+
+4. Checkout:
+    * The checkout is intended to mimick a real life checkout in a supermarket, or a take away restaurant.
+
+* HTML files:
+    * checkout.html
+        * this acts as a final stop for the user to confirm their purchase, input their credit/debit card details and their delivery details - this last gets saved to the profile if the user clicks the save info box.
+    * checkout_success.html
+        * This page confirms the order has been placed, and records the order number and details. The same information can be accessed from the profile
+* Models:
+    * Order
+        * states the info needed to comprise an order, and is created when the user confirms their purchase
+    * Order Line Item
+        * specifies the products that form part of the order, i.e. which products are added to the shopping cart
+
+5. Profile:
+    * The Profile page holds default delivery information, which can be edited by the user, as well as their order history, and links to their wishlist and the reviews page. It can only be accessed by the logged in user, or the super user. I.E. User A cannot access User B's profile, unless User A happens to be a super user.
+
+* HTML files:
+    * profile.html
+        * This holds the user profile
+* Models:
+    * User Profile
+        * this stores information on each user. This info is accessed on the checkout form to pre-fill the delivery data
+
+6. Wishlist:
+    * The wishlist is intended to mimick what Amazon have, where by a user can save a product they wish to look at, maybe buy later, or to maintain several products for comparison purposes, which is something I often do on Amazon. The utility scales with the number of products. As the burger site expands, the utility here will increase. The functionality is similar to that of orders.
+
+* HTML files:
+    * wishlist.html
+        * a page to hold the users wishlist. Currently, wishlists are only visible to their creators. In the future this could change.
+* Models:
+    * Wishlist
+        * similar to the order model, this defines the wishlist in its entirety
+    * WishlistItem
+        * similar to the OrderLineItem, this defines which items are held in the wishlist.
 
 - - - - 
 **6. Wireframes:**
 - - - -
 The wireframes can be accessed from the "wireframes" folder, and also directly here:
 
- [Wireframes file](https://github.com/ANDREWAHN-UK/Milestone-Three/blob/main/MS3.bmpr)
+ [Wireframes file](https://github.com/ANDREWAHN-UK/Milestone-Four/blob/main/ms4.bmpr)
 
- [Wireframes PDF](https://github.com/ANDREWAHN-UK/Milestone-Three/blob/main/MS3.pdf)
+ [Wireframes PDF](https://github.com/ANDREWAHN-UK/Milestone-Four/blob/main/ms4.pdf)
 
 - - - - 
  **7. Technology.**
@@ -127,20 +217,20 @@ Languages Used:
  * HTML5
  * CSS3
  * JavaScript
- * Python
+ * Python 3.8
 
 Frameworks, Libraries & Programs Used:
-1.	Bootstrap 4.4.1:
+1.	Bootstrap 5:
     *	Bootstrap was used to assist with the responsiveness and styling of the website.
 
-2.	Flask:
+2.	Django:
     *	Used to create the web app.
 
-3.	Mongo dB:
-    *	Used to create the database.
+3.	Sqlite3 and Postgres:
+    *	Used to create the database, initially through Django and then through Heroku.
 
 4.	Jinja:
-    *	Used for templating, for loops and conditionals within Flask.
+    *	Used for templating, for loops and conditionals within Django.
 
 5.	Google Fonts:
     *	Google fonts were used to import the 'Lato' font into the style.css file which is used on all pages throughout the project.
@@ -149,19 +239,19 @@ Frameworks, Libraries & Programs Used:
     *	Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
 
 7.	jQuery:
-    *	jQuery came with Bootstrap to make the accordion work.
+    *	jQuery came with Bootstrap, used to make the cards work.
 
-8.	Swiper.js
-    *	This was used to make the images carousel.
-
-9.	GitPod
+8.	GitPod
     *	Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 
-10.	GitHub:
+9.	GitHub:
     *	GitHub is used to store the projects code after being pushed from Git.
 
-11.	Balsamiq:
+10.	Balsamiq:
     *	Balsamiq was used to create the wireframes during the design process.
+
+11. Stripe:
+    * Used to facilitate payments, and webhooks.
 
 - - - - 
 **8. Testing.**
@@ -183,7 +273,7 @@ The website has been deployed on
     6. Take note of the tab below , labelled automatic deploys. Do NOT click this yet.
     7. First, go back to the navbar and click settings.
     8. Then click "Reveal Config Vars"
-     9. Now fill in the fields, which need to be exactly as they are in your env.py file, minus the "". Be careful here.
+     9. Now fill in the fields, which need to be exactly as they are in your env.py file, minus the "". Be careful here. 
     10. Next, check your Procfile is set up correctly. It should read something like this: "web: python app.py"
     11. Now, referring back to step 6, click enable automatic deploys
     12. If done right, at the top right of the webpage, click "open app," and your website should deploy.
@@ -213,26 +303,29 @@ Because this effectively clones the repo, I decided against using the actual clo
 - - - - 
 **Code:** 
 Done by myself, with:
- * some work done by [Bootstrap,](https://getbootstrap.com/) most notably using grids and columns, and the built in accordion feature.
- * code from [swiper.js](https://swiperjs.com/get-started) for the carousel
- * [Code Institute,](https://learn.codeinstitute.net/login?next=/dashboard) namely the Mini Project leading up to Milestone 3
- * Code from Brian Traversy at [Udemy,](https://www.udemy.com/course/50-projects-50-days) "Rotating Navigation" project, namely the base of the navigation system, then heavily modifed for the site purposes
+ * some work done by [Bootstrap,](https://getbootstrap.com/) most notably using grids and columns, and the built in card feature.
+ * Inspiration from [Django For Beginners 4.0](https://djangoforbeginners.com/introduction/) specifically Chapter 12 (Emails,) Chapter 13 (Article App - used as the basis for the reviews) and Chapter 16 (Deployment).
+ * [Code Institute,](https://learn.codeinstitute.net/login?next=/dashboard) namely the Boutique Ado Project leading up to Milestone 4. This formed the basis of the project.
+ * Code from Brian Traversy at [Udemy,](https://www.udemy.com/course/50-projects-50-days) "Vertical Slider" project, which formed the homepage, albeit then heavily modifed for the site purposes.
  
 
 **Content:**
 
 All done by me, with ideas and inspiration for input fields and layout from the following:
- *	Code Institute slack community - seeing what people were doing for the 3rd Project was a very useful steer in terms of understanding the scope
- *	[The Official Las Canteras website](https://www.hellocanaryislands.com/beaches/gran-canaria/las-canteras-beach/) - I considered it obligatory to have a look at what the official website considers important
- *	[TripAdvisor](https://www.tripadvisor.co.uk/) - for ideas on creating the reviews section
- *	[Airbnb](https://www.airbnb.co.uk/)		- for their guidebook feature which was the seed idea of this website
+ *	Code Institute slack community - seeing what people were doing -and importantly what they were NOT doing- for the 4th Project was a very useful steer in terms of understanding the scope
+ *	[Dennis Ivy](https://dennisivy.teachable.com/p/django-beginners-course) for context on organising apps, and Django in general.
+ *	[Django For Beginners 4.0](https://djangoforbeginners.com/introduction/) which was a beginner friendly way to understand Django. I very nearly switched to a blog app, but decided to save that for the future.
+ *	[5 Guys Burgers](https://fiveguys.co.uk/menu/) for ideas on colour scheme and simplicity, consistency -they repear white and pink throughout the website
+ * [The Cherry Cricket](https://cherrycricket.com/food-menu) for a simple and effective burger website, and which I will visit, one day!
+ * [FreshGround Coffee](https://freshground.co.uk/our-coffee/) for ideas regarding a coffee website, which was something I considered.
 
 **Media:**
 
- * [Unsplash](https://unsplash.com/) for some of the images used.
+ * [Unsplash](https://unsplash.com/s/photos/burger) for some of the images used.
  * [Google](https://www.google.com/)  for other images.
- * [My Listing](https://www.airbnb.co.uk/rooms/18222301)  for some of my own images, and my guidebook.
- * [The Official Las Canteras website](https://www.hellocanaryislands.com/beaches/gran-canaria/las-canteras-beach/)  for some images
+ * [Pixabay][https://pixabay.com/images/search/burger/) for some of the images used.
+ * [Pxhere](https://pxhere.com/en/photos?q=burger&search=) for some of the images used.
+ * [Pexels](https://www.pexels.com/search/burger/) for some of the images used.
 
 
 
