@@ -49,18 +49,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'home',
-    'store',
-    'cart',
-    'checkout',
-    'profiles',
-    'wishlist',
+    'django_extensions',  # for creaating the db schema
     'crispy_forms',  # to make forms easier to format using bootstrap
     'django.contrib.sites',  # allauth
     'allauth',  # allauth
     'allauth.account',  # allauth
     'allauth.socialaccount',  # allauth
     'storages',  # for storing static files
+    'home',
+    'store',
+    'cart',
+    'checkout',
+    'profiles',
+    'wishlist',
 ]
 
 MIDDLEWARE = [
@@ -137,6 +138,19 @@ LOGIN_REDIRECT_URL = '/'  # allauth
 
 WSGI_APPLICATION = 'burger.wsgi.application'
 
+# below for the db schema
+GRAPH_MODELS = {
+  'all_applications': True,
+  'group_models': True,
+  "app_labels": [
+        'home',
+        'store',
+        'cart',
+        'checkout',
+        'profiles',
+        'wishlist',
+        ],
+}
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
