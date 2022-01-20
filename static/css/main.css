@@ -38,21 +38,17 @@ a {
 
 /* this is on the navbar */
 #cart-icon {
-    width: 25px;
+    width: 2rem;
     display: inline-block;
     margin-left: 15px;
     position: absolute;
-    right: 50px;
-    bottom: 30px;
+    right: 7.5rem;
+    bottom: .75rem;
 }
 
 /*pushes the logo from the left*/
 .navbar-brand {
     margin-left: 150px;
-}
-
-.navbar-brand img {
-    color: rgb(255, 255, 255);
 }
 
 /* creates space between navbar items */
@@ -75,12 +71,13 @@ a {
     color: #fff;
     background-color: red;
     width: 4rem;
-    height: 25px;
+    height: 2.5rem;
     border-radius: 25%;
-    font-size: 14px;
+    font-size: 16px;
     position: absolute;
     right: 50px;
-    bottom: -15px;
+    bottom: -.5rem;
+    padding-top: 0.5rem;
 }
 
 .update-link,
@@ -88,6 +85,44 @@ a {
     cursor: pointer;
 }
 
+.bottom-navbar{
+    list-style-type: none;
+}
+
+.pulsate-heart {
+    height: 1.8rem;
+    width: 1.8rem;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+    transform: scale(1);
+    animation: heart 5s infinite;
+}
+
+@keyframes heart {
+    0% {
+        transform: scale(0.65);
+        box-shadow: 0 0 0 0 rgba(110, 4, 4, 0);
+    }
+
+    20% {
+        transform: scale(0.75);
+        box-shadow: 0 0 0 0 rgba(110, 4, 4, 0);
+    }
+
+    40% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(110, 4, 4, 0);
+    }
+
+    80% {
+        transform: scale(0.75);
+        box-shadow: 0 0 0 10px rgba(110, 4, 4, 0);
+    }
+
+    100% {
+        transform: scale(0.75);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
 /* ===================================================== {bootstrap toasts} =====================================================*/
 /* this is from CI video Toast- Part 2, edit it for own purposes */
 
@@ -344,9 +379,6 @@ button:focus {
     transition: 0.3s;
 }
 
-/* ====================================================={cart page}===================================================== */
-
-
 /* ====================================================={checkout page}===================================================== */
 
 /* the below is the CI checkout styling */
@@ -418,40 +450,6 @@ button:focus {
     }
 }
 
-.pulsate-heart {
-    height: 1.5rem;
-    width: 1.5rem;
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
-    transform: scale(1);
-    animation: heart 5s infinite;
-}
-
-@keyframes heart {
-    0% {
-        transform: scale(0.65);
-        box-shadow: 0 0 0 0 rgba(110, 4, 4, 0);
-    }
-
-    20% {
-        transform: scale(0.75);
-        box-shadow: 0 0 0 0 rgba(110, 4, 4, 0);
-    }
-
-    40% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(110, 4, 4, 0);
-    }
-
-    80% {
-        transform: scale(0.75);
-        box-shadow: 0 0 0 10px rgba(110, 4, 4, 0);
-    }
-
-    100% {
-        transform: scale(0.75);
-        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    }
-}
 /* ====================================================={Allauth form formatting}===================================================== */
 
 
@@ -512,28 +510,14 @@ button:focus {
 }
 
 /* ====================================================={media queries}===================================================== */
-@media screen and (max-width: 755px) {
-    .container {
-        width: 98%;
-    }
-
-    .col-pro {
-        width: 35%;
-    }
-
-    .col-qty {
-        width: 22%;
-    }
-
-    img {
-        max-width: 100%;
-        margin-bottom: 1em;
-    }
-}
 
 @media (max-width: 1200px) {
     .slider-container .action-buttons button {
         top: 45%;
+    }
+
+    .navbar-brand{
+        margin-left: 0;
     }
 }
 
@@ -598,6 +582,10 @@ button:focus {
         font-size: 12px;
         padding: 15px;
     }
+
+    .nav-item {
+        margin-right: 0;
+    }
 }
 
 @media (max-width: 400px) {
@@ -619,6 +607,14 @@ button:focus {
     button {
         font-size: 14px;
         padding: 10px;
+    }
+
+    #cart-total {       
+        right: 10px;
+    }
+
+    #cart-icon {
+        right: 5rem;
     }
     
 }
