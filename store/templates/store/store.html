@@ -23,10 +23,6 @@
         </a>
 
         <div class="card-body">
-
-          <p class="mb-3">
-            {{ product.description}}
-          </p>
           <!-- Add to wishlist form -->
           <form class="form update-form text-center" method="POST" action="{% url 'add_to_wishlist' product.id %}">
             {% csrf_token %}
