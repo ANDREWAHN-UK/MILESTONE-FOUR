@@ -3,7 +3,7 @@ from django.dispatch import receiver
 
 from .models import OrderLineItem
 
-# the below is based on CI video Checkout -Part 3
+
 # post means after here, not post as a verb
 
 
@@ -22,7 +22,5 @@ def update_on_save(sender, instance, **kwargs):
     """
     instance.order.update_total()
 
-    # More information on signals:
-    # https://docs.djangoproject.com/en/4.0/topics/signals/
-
+  
     

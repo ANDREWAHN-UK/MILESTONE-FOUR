@@ -9,12 +9,6 @@ from django_countries.fields import CountryField
 from store.models import Product
 from profiles.models import UserProfile
 
-
-
-# Create your models here.
-
-# the basis for this model comes from CI Video Checkout - Part1
-# Order here means the entire collection of things chosen by the customer
 class Order(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)
     user_profile = models.ForeignKey(

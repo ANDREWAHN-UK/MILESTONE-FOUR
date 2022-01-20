@@ -2,7 +2,6 @@ from django import forms
 from .models import UserProfile
 
 
-# this is based on CI Profile Video - Part 5
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile

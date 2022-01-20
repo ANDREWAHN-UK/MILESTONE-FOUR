@@ -59,7 +59,7 @@ In a bricks and mortar establishment, it would work very well.
 *	Font - Lato. For the simple reason that it worked well in previous projects, so I saw no need to deviate.
 *	Icons - very few icons were used here. I used font awesome for the icons.
 *	Colours – I want the focus to be on the products, so I used black, white and yellow for the header and footer, and white throughout most of the website. On the Homepage, I used colours appropriate to the burgers being highlighted, e.g. grey (representing urban)
-*	Images – I sourced the images from google images, [Unsplash](https://unsplash.com/s/photos/burger), [Pixabay][https://pixabay.com/images/search/burger/), [Pxhere](https://pxhere.com/en/photos?q=burger&search=) and [Pexels](https://www.pexels.com/search/burger/)
+*	Images – I sourced the images from google images, [Unsplash](https://unsplash.com/s/photos/burger), [Pixabay](https://pixabay.com/images/search/burger/), [Pxhere](https://pxhere.com/en/photos?q=burger&search=) and [Pexels](https://www.pexels.com/search/burger/)
 
  - - - - 
 **5.A Features:**
@@ -87,7 +87,7 @@ The navbar is quite traditional, as the intent is to direct user attention to th
     9. Checkout page with Stripe functioning
     10. User notification of order placed
     11. Order history
-13. Future features/expanding the website :
+4. Future features/expanding the website :
     1. Expand with different burgers
     2. Add a blog feature, discussing, for example, how burger recipes are decided upon
     3. Add a comments feature to the blog
@@ -99,7 +99,10 @@ The navbar is quite traditional, as the intent is to direct user attention to th
     9. the Homepage is made statically, with the text side having to match the appropriate image. This could be done in Django, with, possibly (?) 2 for loops, one to go through the images and the other to go throw the descriptions. Can 2 for loops that reference the same model work?
     10. A more fleshed out User Profile page, specifically with the user's reviews and wishlists viewable and editable directly from here, instead of the current links used. 
     11. A search function for the Admin to go through Users, Reviews, Products could be helpful, if the number of users increases significantly.
-    12. Expand the wishlists so users can views those of other people.
+    12. Expand the wishlists so users can view those of other people.
+    13. Consolidate the wishlist model, to optimise the code
+    14. Add in a form on the product detail page, so users can create reviews directly from there
+    15. Add in some clauses so users can only review items they have purchased
     
  - - - - 
 **5.B  Structure:**
@@ -204,7 +207,7 @@ The navbar is quite traditional, as the intent is to direct user attention to th
 - - - - 
 **6. Wireframes:**
 - - - -
-The wireframes can be accessed from the "wireframes" folder, and also directly here:
+The wireframes can be accessed from the "Documents/wireframes" folder, and also directly here:
 
  [Wireframes file](https://github.com/ANDREWAHN-UK/Milestone-Four/blob/main/ms4.bmpr)
 
@@ -261,7 +264,7 @@ Please refer to the separate [TESTING.md](https://github.com/ANDREWAHN-UK/Milest
 **9. Deployment.**
 - - - - 
 The website has been deployed on
-  *	Heroku.
+  *	[Heroku](https://milestone-four-andrew.herokuapp.com/).
 
   9.1 Deploying to Heroku:
 
@@ -280,8 +283,23 @@ The website has been deployed on
 
  9.2. Github.
 
- Github is the preferred version control and hosting website of the Coding Academy. For this project, it is not used to deploy the website, but to host it. Therefore, previous advice  and steps regarding creating a fork/backup apply, see below.
+ Github is the preferred version control and hosting website of the Coding Academy. For this project, it is not used to deploy the website, as it hosts only static sites, but instructions are below if needed.
+**To deploy the website using Github:**
+  1. 	go to github.com and log in
+  2.	locate the list of repositories, top left of screen
+  3.	click on the required repository, in this case   https://github.com/ANDREWAHN-UK/Milestone-Four/
+  4.	on the top, locate the setting button, click on this
+  5.	scroll down until you see the heading "GitHub pages," click on the link
+  6.	the URL in your browser should read:
+https://github.com/ANDREWAHN-UK/Milestone-Four/settings/pages
+  7.	under "source" there should be a message like this: “Source GitHub Pages is currently disabled. Select a source below to enable GitHub Pages for this repository.”
+  8.	select the appropriate source (choose branch: master) and click save.
+  9.	there will now be a message that reads:" Your site is ready to be published at" followed by a link, in this case: https://andrewahn-uk.github.io/Milestone-Four/
+  10.	It won't work, as this is not a static website. You could potentially get around this by using something like [Django-Freeze](https://github.com/fabiocaccamo/django-freeze)
 
+NB, at step 7, if your page has been published before, the message will read: "Your site is published at  https://andrewahn-uk.github.io/tax-calculator/ ” 
+
+GitHub is the preferred website for the Coding institute.
  **To create a fork/backup:**
 
 GitHub does not currently allow you to directly fork your own repo, but there is a workaround:
@@ -296,7 +314,11 @@ GitHub does not currently allow you to directly fork your own repo, but there is
 
 However, be aware that this is not a real fork, and so you cannot do pull requests back and forth.
 
-Because this effectively clones the repo, I decided against using the actual clone feature, but information on that can be found [here:](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+Because this effectively clones the repo, I decided against using the actual clone feature, but information on that can be found [here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+
+9.3. Gitpod:
+
+The Gitpod workspace has been set to share and can be accessed [here](https://pink-slug-4n0r9b0e.ws-eu27.gitpod.io/)
 
 - - - - 
   **10. Credits**
@@ -305,7 +327,13 @@ Because this effectively clones the repo, I decided against using the actual clo
 Done by myself, with:
  * some work done by [Bootstrap,](https://getbootstrap.com/) most notably using grids and columns, and the built in card feature.
  * Inspiration from [Django For Beginners 4.0](https://djangoforbeginners.com/introduction/) specifically Chapter 12 (Emails,) Chapter 13 (Article App - used as the basis for the reviews) and Chapter 16 (Deployment).
- * [Code Institute,](https://learn.codeinstitute.net/login?next=/dashboard) namely the Boutique Ado Project leading up to Milestone 4. This formed the basis of the project.
+ * [Code Institute,](https://learn.codeinstitute.net/login?next=/dashboard) namely the Boutique Ado Project leading up to Milestone 4. This formed the basis of the project. A considerable amount of code from the Boutique Ado project was used as a basis, in every app except the wishlist app.
+ * For the wishlist app, I used the following resources. 
+    * [Github](https://github.com/pigmonkey/django-wishlist)
+    * [Youtube](https://www.youtube.com/watch?v=OgA0TTKAtqQ&ab_channel=VeryAcademy)
+    * [Code Institute slack](https://code-institute-room.slack.com/archives/C7HS3U3AP/p1613310583353100)
+    * [Django docs](https://docs.djangoproject.com/en/3.1/topics/db/models/#intermediary-manytomany)
+
  * Code from Brian Traversy at [Udemy,](https://www.udemy.com/course/50-projects-50-days) "Vertical Slider" project, which formed the homepage, albeit then heavily modifed for the site purposes.
  
 

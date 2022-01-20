@@ -15,8 +15,6 @@ from django.views.decorators.http import require_POST
 import json
 
 
-# the below based on CI Stripe Video 13
-
 @require_POST
 def cache_checkout_data(request):
     stripe_secret_key = 'sk_test_51K8jexEE3VLVHzWcHSDIRoXnm3cGSze1zo4WDrHeSMwLQjO269ds452ALbYGlliIeTcdqzW7qEc82cOtrKUILdq100uvmXF6cq'
@@ -34,7 +32,6 @@ def cache_checkout_data(request):
             processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
 
-# this is based on CI Checkout Videos- Part 5
 
 def checkout(request):
     # trying to link the below to settings variables did not work
@@ -151,9 +148,7 @@ def checkout_success(request, order_number):
         profile = UserProfile.objects.get(user=request.user)
         # Attach the user's profile to the order
         order.user_profile = profile
-        order.save()
-
-    
+        order.save()   
 
         # Save the user's info. I.E. what the user enters in the form on the checkout page, but only if the save box is ticked
     if save_info:

@@ -1,4 +1,3 @@
-// This is based on CI video Stripe - Part 2 - 6
 
 /*
     Core logic/payment flow for this comes from here:

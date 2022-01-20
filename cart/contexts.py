@@ -34,7 +34,4 @@ def cart_contents(request):
 
     return context
 
-    # This is a simplified version of the Code Institute contexts.py file, 
-    # doing away with delivery as a variable of total spent,
-    # as in this burger store, delivery would be handed off to Deliveroo et al,
-    # and thus also with the need for decimal
+   

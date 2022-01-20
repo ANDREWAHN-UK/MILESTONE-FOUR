@@ -2,20 +2,10 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse, HttpR
 from store.models import Category, Product 
 from django.contrib import messages
 
-# Create your views here.
 
 def view_cart(request):
    
     return render(request, 'cart/cart.html')
-
-
-# this view is based on the CI video Adding Products part1
-# comments are mostly for me to get my head around how this works:
-# this form is submitted to the view, including the item id and quantity
-# then the cart variable is retrieved or created
-# then the item is either updated or added
-# then the variable cart is overwritten with the updated version of cart
-# NB this gets called on the store page, though the view is in the cart app
 
 def add_to_cart(request, item_id):
     """ Add a quantity of the specified product to the shopping cart """
@@ -43,9 +33,6 @@ def add_to_cart(request, item_id):
     
     return redirect(reverse('store'))
 
-# More information on using sessions: https://docs.djangoproject.com/en/4.0/topics/http/sessions/
-
-# this view is based on the CI video Adjusting and Removing Products part 1
 def update_cart(request, item_id):
     """ update the cart with the adjusted number of items """
 
@@ -68,7 +55,6 @@ def update_cart(request, item_id):
     return redirect(reverse('view_cart'))
 
 
-# this view is based on the CI video Adjusting and Removing Products part 1
 def remove_from_cart(request, item_id):
     """Remove the item from the shopping cart"""
 

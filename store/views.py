@@ -28,9 +28,6 @@ def product_detail(request, product_id):
     return render(request, 'store/product_detail.html', context)
 
 
-# the below based on CI Product Admin video series
-
-
 @login_required
 def add_product(request):
     """ Add a product to the store """
@@ -147,3 +144,4 @@ class ReviewDeleteView(DeleteView):
     model = Review
     template_name = 'store/review_delete.html'
     success_url = reverse_lazy('store')
+    

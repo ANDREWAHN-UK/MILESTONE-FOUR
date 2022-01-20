@@ -6,7 +6,7 @@ from django.views.decorators.csrf import csrf_exempt
 from checkout.webhook_handler import StripeWH_Handler
 
 import stripe
-
+# only worked with the 2 variables below accessed from here, not settings
 stripe.api_key = 'sk_test_51K8jexEE3VLVHzWcHSDIRoXnm3cGSze1zo4WDrHeSMwLQjO269ds452ALbYGlliIeTcdqzW7qEc82cOtrKUILdq100uvmXF6cq'
 wh_secret = 'whsec_dK3ZV3t49iRATxMXtNltEtHOf5Y1b36B'
 

@@ -52,8 +52,6 @@
                             <p class="my-0">£{{ item.product.price }}</p>
                         </td>
                         <td class="py-3 w-25">
-
-                            <!-- this form is based on the CI video Adding Products part 6 -->
                             <form action="{% url 'update_cart' item.item_id %}" class="form update-form" method="POST">
                                 {% csrf_token %}
                                 <div class="form-group w-50">

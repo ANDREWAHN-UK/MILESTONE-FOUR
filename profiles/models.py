@@ -6,9 +6,6 @@ from django.dispatch import receiver
 from django_countries.fields import CountryField
 
 
-# Create your models here.
-# the below based on CI Profiles Video - Part 2
-
 class UserProfile(models.Model):
     """
     A user profile model for maintaining default

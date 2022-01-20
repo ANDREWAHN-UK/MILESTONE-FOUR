@@ -2,7 +2,6 @@ from django import forms
 from .models import Order
 
 
-# this is based on CI video Checkouts - Part 4
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order

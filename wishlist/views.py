@@ -11,20 +11,6 @@ from django.utils import timezone
 from django.contrib import messages
 
 # Create your views here.
-""" 
-Much googling and research led to the following:
-https://github.com/pigmonkey/django-wishlist
-https://www.youtube.com/watch?v=OgA0TTKAtqQ&ab_channel=VeryAcademy
-
-Code below is based on that, and on the following Slack conversation:
-
-https://code-institute-room.slack.com/archives/C7HS3U3AP/p1613310583353100
-
-and documentation here:
-https://docs.djangoproject.com/en/3.1/topics/db/models/#intermediary-manytomany
-
-
-"""
 
 
 @login_required

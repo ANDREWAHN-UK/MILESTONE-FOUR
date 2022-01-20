@@ -6,10 +6,6 @@ from .forms import UserProfileForm
 from checkout.models import Order
 from django.contrib.auth.decorators import login_required
 
-# Create your views here.
-
-# Below based on CI Profile Video - Part 4 and 5
-
 
 @login_required
 def profile(request):
@@ -38,7 +34,6 @@ def profile(request):
     return render(request, template, context)
 
 
-# Below based on CI Profile Video - Part 7
 
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)

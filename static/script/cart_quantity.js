@@ -1,4 +1,4 @@
-    // this is based on CI video Adding Products Part5
+
       // Disable +/- buttons outside 1-99 range
       function handleEnableDisable(itemId) {
         var currentValue = parseInt($(`#id_qty_${itemId}`).val());
