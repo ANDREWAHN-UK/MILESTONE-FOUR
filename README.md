@@ -27,16 +27,19 @@ In a bricks and mortar establishment, it would work very well.
  - - - -
 1. As a **Potential Employer** for a Coding Role, I want to view Andrew’s website, to see how he performs as a Full stack developer. I want to be able to navigate the website and compare it to others, of similar scope.
 2. As a **Potential Employer** for a Coding Role, further to the above, I would be particularly interested in the use of Python and Django in this website.
+- - - -
 3. As a **site user**, I want to easily register for an account, so that I can have a personal account and view my profile.
 4. As a **site user**,  I want to have a profile, so that I can view my order history, delivery and payment details.
 5. As a **site user**, I want to be able to view other reviews.
 6. As a **site user**, I want to be able to create, update and delete my own reviews. 
+- - - -
 7. As a **shopper**, I want to be able to view a list of burgers, so I can choose one/many.
 8. As a **shopper**, I want to be able to view my shopping bag/cart, so I can keep track of my order and cost, and adjust quantities etc
 9. As a **shopper**, I want to be able to view pay without any fuss, so I can check out quickly, and get my burgers
 10. As a **shopper**, I want a record of orders placed
 11. As a **shopper**, I want my payment info to be securely kept, so I do not need to worry about safety.
 12. As a **shopper**, I want to be able to store interesting products in a wishlist, which I can view later and from which I can purchase items.
+- - - -
 13. As an **store owner/super user** I want to be able to update and delete other peoples' reviews and profiles.
 14. As an **store owner/super user** , I want to be able to add new products, so I can take advantage of market trends and holiday specials. E.G. there is a burger here called the Eirann, which I put in as a St.Patrick's day idea, but I like the sound of it so much I put it as the very first thing users see.
 15. As an **store owner/super user** , I want to be able to edit/update products, for example using different images or adjusting the price.
