@@ -452,49 +452,6 @@ button:focus {
         box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     }
 }
-
-*/ .checkout-btn {
-    padding: 10px 30px;
-    border-radius: 0.3em;
-    font-size: 1.4em;
-    font-weight: bold;
-    background: #159b3d;
-    color: #fff;
-    box-shadow: 0 3px 0 rgba(59, 154, 198, 1)
-}
-
-/* this acts like a header for the table */
-.th-checkout {
-    background: #74722a;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1.5em;
-}
-
-/* this sits at the bottom */
-.tf-checkout {
-    background: #74722a;
-    text-transform: uppercase;
-    text-align: right;
-    font-size: 1.2em;
-}
-
-.tf-checkout p {
-    color: #fff;
-    font-weight: bold;
-}
-
-/* this is the heading */
-.checkout-heading {
-    padding: 1em;
-    position: relative;
-    z-index: 1;
-    color: #f7f7f7;
-    background: #74722a;
-}
-
-
 /* ====================================================={Allauth form formatting}===================================================== */
 
 
@@ -638,10 +595,6 @@ button:focus {
     }
 
     button {
-        background-color: #fff;
-        border: black;
-        color: #aaa;
-        cursor: pointer;
         font-size: 12px;
         padding: 15px;
     }
@@ -660,8 +613,14 @@ button:focus {
 
     .slider-container .action-buttons button {
         left: 50%;
-        top: 50%;
+        top: 48%;
     }
+    
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+    
 }
 
 @media (max-width: 350px) {
@@ -683,13 +642,8 @@ button:focus {
     }
 
     button {
-        background-color: #fff;
-        border: black;
-        color: #aaa;
-        cursor: pointer;
         font-size: 12px;
         padding: 15px;
-
     }
 }
 
@@ -712,12 +666,7 @@ button:focus {
     }
 
     button {
-        background-color: #fff;
-        border: black;
-        color: #aaa;
-        cursor: pointer;
         font-size: 12px;
         padding: 10px;
-
     }
 }
