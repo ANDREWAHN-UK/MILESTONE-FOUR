@@ -67,19 +67,26 @@ In a bricks and mortar establishment, it would work very well.
  - - - - 
 **5.A Features:**
  - - - -
-1. Feature - Header/Navbar basic - to consist of links to:
+1. Header/Navbar basic - to consist of links to:
 * the home page;
 * the burger menu page; 
-* Profile management[(Product Management (for Super User); Manage Profile (logged in users); Log out (logged in users); Review a Burger (logged in users), Read All Reviews (all users), Go to Wishlist, Register and Log in (new/logged out users)]; 
+* Profile management:
+    * Product Management (for Super User) 
+    * Manage Profile (logged in users)
+    * Log out (logged in users)
+    * Review a Burger (logged in users)
+    * Read All Reviews (all users)
+    * Go to Wishlist (new/logged out users will be directed to sign in or make an account, logged in users will go to their wishlist)
+    * Register and Log in (new/logged out users) 
 * the wishlist;
 * the cart, with a display of the £ amount so far
 
 The navbar is quite traditional, as the intent is to direct user attention to the products.
 
-2. Feature - Footer – Link to Home Page, link to social media
+2. Footer – Link to Home Page, link to social media
 
 3. Minimal Viable Project is :
-    1. Navbar basic
+    1. Navbar basic (i.e. Header and footer)
     2. Homepage
     3. Store page
     4. User profile Page (once logged in)
@@ -101,18 +108,22 @@ The navbar is quite traditional, as the intent is to direct user attention to th
     8. Add a page like pinterest or imgur, just for burger related (user submitted?) images
     9. the Homepage is made statically, with the text side having to match the appropriate image. This could be done in Django, with, possibly (?) 2 for loops, one to go through the images and the other to go throw the descriptions. Can 2 for loops that reference the same model work?
     10. A more fleshed out User Profile page, specifically with the user's reviews and wishlists viewable and editable directly from here, instead of the current links used. 
-    11. A search function for the Admin to go through Users, Reviews, Products could be helpful, if the number of users increases significantly.
-    12. Expand the wishlists so users can view those of other people.
-    13. Consolidate the wishlist model, to optimise the code
-    14. Add in a form on the product detail page, so users can create reviews directly from there
-    15. Add in some clauses so users can only review items they have purchased
+    11. A search function for the Admin to go through Users, Reviews, Products could be helpful, if the number of users increases significantly. 
+    12. A search function for users to go through their orders, the products etc
+    13. Expand the wishlists so users can view those of other people.
+    14. Consolidate the wishlist model, to optimise the code
+    15. Add in a form on the product detail page, so users can create reviews directly from there
+    16. Add in some clauses so users can only review items they have purchased
     
  - - - - 
 **5.B  Structure:**
  - - - -
 
  Here follows a brief overview of each app within the website, with detail on the html pages and models used.
+ - - - - 
 1. Home App:
+    * The user starts their journey here
+- - - - 
 * HTML files:
   * home.html
     * This is the landing page. The effect here is a vertical slider, to provide some interactivityas opposed to a more traditional and static Homepage. USers can click up or down, changing the images and the descriptive text of a selection of Hamburgers.
@@ -120,9 +131,10 @@ The navbar is quite traditional, as the intent is to direct user attention to th
     none
 
     
-
+- - - - 
 2. Store App:
     * This main effort here is the store page, where users can select burgers and interact with review and wishlists.
+- - - - 
 * HTML files:
     * add_product.html:
         * allows super users to add new products to the database
@@ -159,9 +171,10 @@ The navbar is quite traditional, as the intent is to direct user attention to th
         * A model of the review, with information to be displayed, such as the product being reviewed, the review author etc. 
 
    
-
-3. Cart:
+- - - - 
+3. Cart App:
     * The cart page acts as the nexus between the store app + pages and the checkout app + pages
+- - - - 
 * HTML files:
     
     * cart.html
@@ -170,10 +183,10 @@ The navbar is quite traditional, as the intent is to direct user attention to th
     None
 
     
-
+- - - - 
 4. Checkout:
     * The checkout is intended to mimick a real life checkout in a supermarket, or a take away restaurant.
-
+- - - - 
 * HTML files:
     * checkout.html
         * this acts as a final stop for the user to confirm their purchase, input their credit/debit card details and their delivery details - this last gets saved to the profile if the user clicks the save info box.
@@ -184,20 +197,20 @@ The navbar is quite traditional, as the intent is to direct user attention to th
         * states the info needed to comprise an order, and is created when the user confirms their purchase
     * Order Line Item
         * specifies the products that form part of the order, i.e. which products are added to the shopping cart
-
+- - - - 
 5. Profile:
     * The Profile page holds default delivery information, which can be edited by the user, as well as their order history, and links to their wishlist and the reviews page. It can only be accessed by the logged in user, or the super user. I.E. User A cannot access User B's profile, unless User A happens to be a super user.
-
+- - - - 
 * HTML files:
     * profile.html
         * This holds the user profile
 * Models:
     * User Profile
         * this stores information on each user. This info is accessed on the checkout form to pre-fill the delivery data
-
+- - - - 
 6. Wishlist:
     * The wishlist is intended to mimick what Amazon have, where by a user can save a product they wish to look at, maybe buy later, or to maintain several products for comparison purposes, which is something I often do on Amazon. The utility scales with the number of products. As the burger site expands, the utility here will increase. The functionality is similar to that of orders.
-
+- - - - 
 * HTML files:
     * wishlist.html
         * a page to hold the users wishlist. Currently, wishlists are only visible to their creators. In the future this could change.
@@ -215,6 +228,8 @@ The wireframes can be accessed from the "Documents/wireframes" folder, and also 
  [Wireframes file](https://github.com/ANDREWAHN-UK/Milestone-Four/blob/main/ms4.bmpr)
 
  [Wireframes PDF](https://github.com/ANDREWAHN-UK/Milestone-Four/blob/main/ms4.pdf)
+
+ The Project underwent several revisions, but the intent behind the wireframes came through.
 
 - - - - 
  **7. Technology.**
