@@ -18,6 +18,11 @@ html {
     padding-bottom: 3rem;
 }
 
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
 /* ====================================================={navbar}===================================================== */
 
 /* sets header and footer background colour */
@@ -182,27 +187,27 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: rgb(236, 231, 231);
 }
 
 .left-1 {
-    background-color: #FD3555;
+    background-color: #a51930;
 }
 
 .left-2 {
-    background-color: #2A86BA;
+    background-color: #174e6d;
 }
 
 .left-3 {
-    background-color: #252E33;
+    background-color: #121414;
 }
 
 .left-4 {
-    background-color: #FFB866;
+    background-color: #8a561c;
 }
 
 .left-5 {
-    background-color: #458b29;
+    background-color: #254917;
 }
 
 .left-slide h1 {
@@ -249,9 +254,9 @@ html {
 }
 
 button {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.233);
     border: black;
-    color: #aaa;
+    color: #ffffff;
     cursor: pointer;
     font-size: 16px;
     padding: 15px;
@@ -288,6 +293,10 @@ button:focus {
     border-bottom-right-radius: 5px;
 }
 
+.up-button, .down-button {
+    border-style: double;
+    color: white;
+}
 /* ====================================================={store/menu page}===================================================== */
 
 /* thumbnail affects the images in the store and the cart etc, intended to create uniformity, regardless of image variation. */
@@ -363,9 +372,7 @@ input {
 }
 
 
-a {
-    text-decoration: none;
-}
+
 
 .cart-container {
     max-width: 75em;
@@ -687,13 +694,14 @@ a {
 
 
 /* ====================================================={Allauth form formatting}===================================================== */
-/* be sure to update this for own project */
+
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem;
     /* mt-4 */
     color: #6c757d;
     /* text-secondary */
+    font-size: 18px;
 }
 
 .allauth-form-inner-content input {
@@ -740,7 +748,7 @@ a {
 }
 
 .allauth-form-inner-content a {
-    color: #17a2b8;
+    color: #24707c;
     /* text-info */
 }
 
