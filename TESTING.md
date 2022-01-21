@@ -22,9 +22,18 @@ The html validator returned the errors:
 3. On the recommendation of my tutor, I used https://jshint.com/ to validate the JavaScript:
 
 With jshint, it informed me of the following:
-  * 	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-In other words, no real errors, probably because there was little Javascript used, compared to the previous Project.
-It also informed me of several missing semicolons, which I rectified.
+  * 	in cart_quantity.js:
+      * 	"'template literal syntax' is only available in ES6 (use 'esversion: 6')."  --> nothing changed.
+  
+  * in homepage.js:
+      * "'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz)." --> nothing changed.
+      * "Missing semicolon." - on several lines.  --> Added the semi colons.
+      * "	'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6')." --> nothing changed.
+      * "'template literal syntax' is only available in ES6 (use 'esversion: 6')." --> nothing changed.
+      * "	'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz)." --> nothing changed.
+  
+  * in stripe_elements.js:
+      * "'template literal syntax' is only available in ES6 (use 'esversion: 6')." --> nothing changed.
 
 4. I used http://pep8online.com/ to validate the Python code.
     * No errors found

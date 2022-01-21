@@ -523,7 +523,7 @@ button:focus {
 .allauth-form-inner-content input[type='submit']:hover {
     color: #fff;
     background-color: #222;
-    border-color: #222;
+    border-color: rgb(121, 53, 53);
 }
 
 .allauth-form-inner-content a {
