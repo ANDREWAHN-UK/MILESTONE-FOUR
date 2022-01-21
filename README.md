@@ -39,12 +39,11 @@ In a bricks and mortar establishment, it would work very well.
 11. As a **shopper**, I want my payment info to be securely kept, so I do not need to worry about safety.
 12. As a **shopper**, I want to be able to store interesting products in a wishlist, which I can view later and from which I can purchase items.
 - - - -
-13. As an **store owner/super user** I want to be able to update and delete other peoples' reviews and profiles.
+13. As an **store owner/super user** I want to be able to update and delete other peoples' reviews.
 14. As an **store owner/super user** , I want to be able to add new products, so I can take advantage of market trends and holiday specials. E.G. there is a burger here called the Eirann, which I put in as a St.Patrick's day idea, but I like the sound of it so much I put it as the very first thing users see.
 15. As an **store owner/super user** , I want to be able to edit/update products, for example using different images or adjusting the price.
 16. As an **store owner/super user** , I want to be able to delete products, if they are not selling.
-17. As an **store owner/super user** , I want to be able to access the database, so I can easily see what is (not) selling, and identify patterns/trends, e.g., many sales from a particular neighbourhood.
-18. As an **store owner/super user** , I want to be able to keep the site secure by only allowing authorised users to access certain areas of the site.
+17. As an **store owner/super user** , I want to be able to keep the site secure by only allowing authorised users to access certain areas of the site.
 
  - - - - 
 **3. Stakeholder Goals**

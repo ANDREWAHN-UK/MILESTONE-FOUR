@@ -96,70 +96,48 @@ Please note that I have chosen to list the screenshots in stead of displaying th
 * [(Readme Section 2.8) View the store. iPhone XR](https://i.imgur.com/l1OoDsH.jpg) detailed view of product
 - - - -
 - - - -
-* [(Readme Section 2.9) View the cart. Full screen (1920*1080)]()
+* [(Readme Section 2.9) View the cart. Full screen (1920*1080)](https://i.imgur.com/EAsNsvs.jpg)
 
-* [(Readme Section 2.9) View the cart. iPhone XR]()
+* [(Readme Section 2.9) View the cart. iPhone XR](https://i.imgur.com/JvzPOab.jpg)
 - - - -
 - - - -
-* [(Readme Section 2.10, 2.11) Pay easily, and have payment details secure. Full screen (1920*1080)]()
+* [(Readme Section 2.10, 2.11) Pay easily, and have payment details secure. Full screen (1920*1080)](https://i.imgur.com/cuTsFMV.jpg)
 
-* [(Readme Section 2.10, 2.11) Pay easily, and have payment details secure. iPhone XR]()
+* [(Readme Section 2.10, 2.11) Pay easily, and have payment details secure. iPhone XR](https://i.imgur.com/tChhZvv.jpg)
 - - - -
 - - - -
-* [(Readme Section 2.12) Wishlist. Full screen (1920*1080)]()
+* [(Readme Section 2.12) Wishlist. Full screen (1920*1080)](https://i.imgur.com/xXkfCK8.jpg) go to wishlist - done from Profile and navbar
+* [(Readme Section 2.12) Wishlist. Full screen (1920*1080)](https://i.imgur.com/fWKoDzK.jpg) add to wishlist - done from the store and product detail pages
+* [(Readme Section 2.12) Wishlist. Full screen (1920*1080)](https://i.imgur.com/AeCUdtt.jpg) what the wishlist looks like  
+* [(Readme Section 2.12) Wishlist. Full screen (1920*1080)](https://i.imgur.com/rJXwy5W.jpg) remove an item from the wishlist
+- - - -
+* [(Readme Section 2.12) Wishlist. iPhone XR](https://i.imgur.com/LusRr9u.jpg) go to wishlist - done from Profile and navbar
+* [(Readme Section 2.12) Wishlist. iPhone XR](https://i.imgur.com/Svy9drD.jpg) add to wishlist - done from the store and product detail pages
+* [(Readme Section 2.12) Wishlist. iPhone XR](https://i.imgur.com/apFP3mO.jpg) what the wishlist looks like  
+* [(Readme Section 2.12) Wishlist. iPhone XR](https://i.imgur.com/21O2rvL.jpg) remove an item from the wishlist
+- - - -
 
-* [(Readme Section 2.12) Wishlist. iPhone XR]()
-- - - -
 
-
-3. Users that want to create/update and delete reviews:
-* The create, edit and delete functionality is accessed via the Profile and Review pages.
-Full screen (1920*1080) User Profile
-- - - -
-  ![image](https://i.imgur.com/cxzjvVX.png)
-- - - -
-iPhone 8 User Profile:
-- - - -
-![image](https://i.imgur.com/1NK6NiJ.png)
-- - - -
-Full screen (1920*1080) Reviews page with edit/delete buttons
-- - - -
-  ![image](https://i.imgur.com/pT9iKjo.png)
-- - - -
-iPhone 8 Reviews page with edit/delete buttons:
-- - - -
-![image](https://i.imgur.com/QU3cA17.png)
-- - - -
-Full screen (1920*1080) Creating a Review:
-- - - -
-![image](https://i.imgur.com/nkPGMJp.png)
-- - - -
-iPhone 8 Creating a Review:
-- - - -
-![image](https://i.imgur.com/fHZdY4I.png)
-- - - -
-Full screen (1920*1080) Editing a Review:
-- - - -
-![image](https://i.imgur.com/r7nn6gx.png)
-- - - -
-iPhone 8 Editing a Review:
-- - - -
-![image](https://i.imgur.com/f8U0nAU.png)
+3.Admin/Super users
 - - - -
 
 4. Admin user:
-When logged in as Admin, User can access all reviews *and* profiles, via Profile and Reviews Page.
-Full screen (1920*1080) Admin Profile
+When logged in as Admin/ superuser, the user can add, edit, delete products, and edit/delete all reviews
+(Readme Section 2.13 --> 2.18)
+
 - - - -
-  ![image](https://i.imgur.com/8kwbTFV.png)
+* [(Readme Section 2.13) CRUD Reviews (1920*1080)](https://i.imgur.com/RE4E8rb.jpg) Admin can edit/delete any review
+* [(Readme Section 2.13) CRUD Reviews. iPhone XR](https://i.imgur.com/J9KyHtl.jpg) Admin can edit/delete any review
 - - - -
-iPhone 8 Admin Profile:
 - - - -
-![image](https://i.imgur.com/RkDh9Tm.png)
+* [(Readme Section 2.14-->2.16) CRUD Products (1920*1080)](https://i.imgur.com/c34RxXY.jpg) Go to Add Product (Manage Products)
+* [(Readme Section 2.14-->2.16) CRUD Products (1920*1080)](https://i.imgur.com/p0JBQrr.jpg) Add Product Form
+* [(Readme Section 2.14-->2.16) CRUD Products (1920*1080)](https://i.imgur.com/KDWQmCL.jpg) Admin can edit/delete any product
 - - - -
-Full screen (1920*1080) Admin Profile page, showing  edit/delete Profiles function
+* [(Readme Section 2.14-->2.16) CRUD Products. iPhone XR](https://i.imgur.com/hA5T3CD.jpg) Go to Add Product (Manage Products)
+* [(Readme Section 2.14-->2.16) CRUD Products. iPhone XR](https://i.imgur.com/Qxt0yga.jpg) Add Product Form
+* [(Readme Section 2.14-->2.16) CRUD Products. iPhone XR](https://i.imgur.com/PFpV7TR.jpg) Admin can edit/delete any product
 - - - -
-  ![image](https://i.imgur.com/A6HbNwc.png)
 - - - -
 iPhone 8 Admin Profile page, showing  edit/delete Profiles function :
 - - - -

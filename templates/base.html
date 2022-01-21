@@ -163,15 +163,16 @@
     {% block footer %}
     {% endblock %}
       <div class="row align-items-center p-2 m-0 bottom-navbar">
-          <div class="text-white col-4">
-            <p class="text-white burger-copyright m-0"> © NomNom Burgers 2022</p>
-          </div>
+          
           <div class="text-white col-4">
             <div class="btt-button rounded-0">
                 <a class="navbar-brand" href="{% url 'home' %}">
                     <img src="{% static 'media/home-icon-4.png' %}" alt="" width="30" height="24">
                 </a>
             </div>
+          </div>
+          <div class="text-white col-4">
+            <p class="text-white burger-copyright m-0"> © NomNom Burgers 2022</p>
           </div>
           <div class="col-4 text-center p-0">
               <a class="facebook text-white p-0.5" href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="facebook"><i
