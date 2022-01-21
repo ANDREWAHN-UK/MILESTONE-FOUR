@@ -23,15 +23,16 @@ html {
 /* ====================================================={navbar}===================================================== */
 
 /* sets header and footer background colour */
-.navbar{
+.navbar {
     background-color: black;
 }
 
-.bottom-navbar .nav-item{
-    padding-left:85px;
+.bottom-navbar .nav-item {
+    padding-left: 85px;
     padding-right: 85px;
     margin-top: 10px;
 }
+
 /* sets header and footer navlink colour, i.e .the text */
 .nav-link {
     color: #fff;
@@ -87,7 +88,10 @@ html {
 }
 
 .bottom-navbar {
-    list-style-type: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
 }
 
 .pulsate-heart {
@@ -574,11 +578,6 @@ button:focus {
         padding: 10px;
     }
 
-    .bottom-navbar{
-        display: none;
-    }
-
-    
 }
 
 @media (max-width: 550px) {
@@ -590,6 +589,10 @@ button:focus {
     .left-slide p {
         padding-left: 10px;
     }
+
+    .burger-copyright {
+        padding-left: 10px;
+    }
 }
 
 @media (max-width: 450px) {
@@ -597,14 +600,16 @@ button:focus {
         left: 50%;
         top: 50%;
     }
-    .left-slide h1{
+
+    .left-slide h1 {
         font-size: 24px;
     }
+
     .left-slide p {
         font-size: 24px;
         padding-left: 10px;
-
     }
+
 
     button {
         font-size: 12px;
@@ -615,14 +620,15 @@ button:focus {
         margin-right: 0;
     }
 
-    .left-inner-1, .left-inner-2 {
+    .left-inner-1,
+    .left-inner-2 {
         padding-left: 20px;
     }
-    
+
 }
 
 @media (max-width: 400px) {
-    
+
     .left-slide p {
         font-size: 18px;
         padding-left: 10px;
@@ -646,16 +652,18 @@ button:focus {
         right: 5rem;
     }
 
-    .left-inner-1, .left-inner-2  {
+    .left-inner-1,
+    .left-inner-2 {
         margin-top: 10px;
         margin-bottom: 10px;
     }
-    .left-inner-2{
+
+    .left-inner-2 {
         margin-top: -10px;
         margin-bottom: 10px;
     }
 
-    .left-slide h1{
+    .left-slide h1 {
         font-size: 20px;
     }
 }
@@ -675,6 +683,10 @@ button:focus {
     button {
         font-size: 12px;
         padding: 15px;
+    }
+
+    .burger-copyright {
+        display: none;
     }
 }
 
@@ -696,7 +708,8 @@ button:focus {
         padding: 10px;
     }
 
-    .left-inner-1, .left-inner-2  {
+    .left-inner-1,
+    .left-inner-2 {
         padding-left: 10px;
     }
 }

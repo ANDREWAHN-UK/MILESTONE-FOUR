@@ -90,8 +90,10 @@ Please note that I have chosen to list the screenshots in stead of displaying th
 - - - -
 - - - -
 * [(Readme Section 2.8) View the store. Full screen (1920*1080)](https://i.imgur.com/kl0Axmy.jpg) store general
-
-* [(Readme Section 2.8) View the store. iPhone XR](https://i.imgur.com/DHkwEaN.jpg)
+* [(Readme Section 2.8) View the store. Full screen (1920*1080)](https://i.imgur.com/kImdWcR.jpg) detailed view of product
+- - - -
+* [(Readme Section 2.8) View the store. iPhone XR](https://i.imgur.com/DHkwEaN.jpg) store general
+* [(Readme Section 2.8) View the store. iPhone XR](https://i.imgur.com/l1OoDsH.jpg) detailed view of product
 - - - -
 - - - -
 * [(Readme Section 2.9) View the cart. Full screen (1920*1080)]()
