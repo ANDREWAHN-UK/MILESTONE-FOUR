@@ -9,8 +9,10 @@ This is the testing section of the readme, placed in a separate file:
 1. I used https://validator.w3.org to validate the html. 
 
 The html validator returned the errors:
-  * "End tag li seen, but there were open elements."  This is because I forgot the end </a> on a couple of headings.
-  *	"Section lacks heading. Consider using h2-h6 elements". This was on base.html. Adding a heading meant that heading was visible on all pages, obviously unwanted. So I removed the section element, to no ill effect.
+  * "The element button must not appear as a descendant of the a element."  which I corrected.
+  *	"The type attribute is unnecessary for JavaScript resources.". - corrected
+  * "The element button must not appear as a descendant of the a element." & "The element a must not appear as a descendant of the button element." - This was on the homepage, so I adjusted the a tags to look like button, then adjust the viewports again.
+  * 
 
 2. I used https://jigsaw.w3.org/css-validator/ to validate the CSS:
 

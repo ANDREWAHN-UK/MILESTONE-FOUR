@@ -85,7 +85,7 @@ a {
     cursor: pointer;
 }
 
-.bottom-navbar{
+.bottom-navbar {
     list-style-type: none;
 }
 
@@ -123,6 +123,7 @@ a {
         box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     }
 }
+
 /* ===================================================== {bootstrap toasts} =====================================================*/
 /* this is from CI video Toast- Part 2, edit it for own purposes */
 
@@ -251,6 +252,15 @@ a {
     margin-top: -30px;
 }
 
+.left-inner-1 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.left-inner-2 {
+    margin-top: 20px;
+}
+
 .right-slide {
     height: 100%;
     position: relative;
@@ -299,6 +309,12 @@ button {
 
 .button-store {
     border-radius: 40%;
+    background-color: rgba(255, 255, 255, 0.233);
+    border: black;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 15px;
 }
 
 button:hover {
@@ -328,10 +344,12 @@ button:focus {
     border-bottom-right-radius: 5px;
 }
 
-.up-button, .down-button {
+.up-button,
+.down-button {
     border-style: double;
     color: white;
 }
+
 /* ====================================================={store/menu page}===================================================== */
 
 /* thumbnail affects the images in the store and the cart etc, intended to create uniformity, regardless of image variation. */
@@ -516,7 +534,7 @@ button:focus {
         top: 45%;
     }
 
-    .navbar-brand{
+    .navbar-brand {
         margin-left: 0;
     }
 }
@@ -537,17 +555,17 @@ button:focus {
         left: 50%;
     }
 
-    .left-slide h1 {
-        font-size: 24px;
-        margin-top: -150%;
-    }
-
     .left-slide p {
         font-size: 18px;
     }
 
     .slider-container .action-buttons button {
         left: 50%;
+    }
+
+    .button-store {
+        font-size: 12px;
+        padding: 10px;
     }
 }
 
@@ -567,15 +585,13 @@ button:focus {
         left: 50%;
         top: 50%;
     }
-
-    .left-slide h1 {
+    .left-slide h1{
         font-size: 24px;
-        margin-top: -350%;
     }
-
     .left-slide p {
         font-size: 24px;
         padding-left: 10px;
+
     }
 
     button {
@@ -586,14 +602,15 @@ button:focus {
     .nav-item {
         margin-right: 0;
     }
+
+    .left-inner-1, .left-inner-2 {
+        padding-left: 20px;
+    }
+    
 }
 
 @media (max-width: 400px) {
-    .left-slide h1 {
-        font-size: 20px;
-        margin-top: -300%;
-    }
-
+    
     .left-slide p {
         font-size: 18px;
         padding-left: 10px;
@@ -603,32 +620,38 @@ button:focus {
         left: 50%;
         top: 48%;
     }
-    
+
     button {
         font-size: 14px;
         padding: 10px;
     }
 
-    #cart-total {       
+    #cart-total {
         right: 10px;
     }
 
     #cart-icon {
         right: 5rem;
     }
-    
+
+    .left-inner-1, .left-inner-2  {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .left-inner-2{
+        margin-top: -10px;
+        margin-bottom: 10px;
+    }
+
+    .left-slide h1{
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 350px) {
     .slider-container .action-buttons button {
         left: 50%;
         top: 25%;
-    }
-
-    .left-slide h1 {
-        font-size: 20px;
-        margin-top: -300%;
-        margin-left: -25px;
     }
 
     .left-slide p {
@@ -646,17 +669,12 @@ button:focus {
 @media (max-width: 300px) {
     .slider-container .action-buttons button {
         left: 50%;
-        top: 45%;
+        top: 50%;
     }
 
-    .left-slide h1 {
-        font-size: 20px;
-        margin-top: -400%;
-        margin-left: -25px;
-    }
 
     .left-slide p {
-        font-size: 20px;
+        font-size: 16px;
         padding-left: 10px;
 
     }
@@ -664,5 +682,9 @@ button:focus {
     button {
         font-size: 12px;
         padding: 10px;
+    }
+
+    .left-inner-1, .left-inner-2  {
+        padding-left: 10px;
     }
 }

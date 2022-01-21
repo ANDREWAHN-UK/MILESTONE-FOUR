@@ -10,161 +10,182 @@
     <!-- If another left slide is added, it needs to inversely match the right side -->
     <div class="left-slide">
         <div class="left-1">
-            {% if request.user.is_authenticated %}
-            <p>
-                Welcome back {{ user.username }}.
-            </p>
-            <p>What burger would you like today?</p>
-            {% else %}
+            <div class="left-inner-1">
+                {% if request.user.is_authenticated %}
+                <p>
+                    Welcome back {{ user.username }}.
+                </p>
+                <p>What burger would you like today?</p>
+                {% else %}
 
-            <p> Hello Guest.</p>
+                <p> Hello Guest.</p>
 
-            <p>Get Your first burger for free!</p>
-            <a href="{% url 'account_signup' %}"><button class="button-store text-uppercase mt-0 mb-0">Sign up
-                    here.</button></a>
-            <br>
-            <a href="{% url 'account_login' %}"><button class="button-store text-uppercase mt-0 mb-0">Log
-                    in here.</button></a>
+                <p>Get Your first burger for free!</p>
+                <a href="{% url 'account_signup' %}" class="button-store text-uppercase mt-0 mb-0">Sign up
+                    here.</a>
+                <br>
+                <br>
+                <a href="{% url 'account_login' %}" class="button-store text-uppercase mt-0 mb-0">Log
+                    in here.</a>
 
-            {% endif %}
+                {% endif %}
+            </div>
+            <div class="left-inner-2">
+                <br>
+                <br>
+                <br>
+                <br>
 
-            <br>
-            <br>
-            <br>
-            <br>
+                <h1>The Frenchie<i class="fas fa-arrow-right"></i>
+                </h1>
 
-            <h1>The Frenchie<i class="fas fa-arrow-right"></i>
-            </h1>
-
-            <p>Liberté, egalite, fraternité, hamburger!</p>
-            <a href="{% url 'store'  %}"><button class="button-store">Go to the menu</button></a>
-
+                <p>Liberté, egalite, fraternité, hamburger!</p>
+                <a href="{% url 'store'  %}" class="button-store text-uppercase mt-0 mb-0">Go to the menu</a>
+            </div>
 
         </div>
         <div class="left-2">
-            {% if request.user.is_authenticated %}
-            <p>
-                Welcome back {{ user.username }}.
-            </p>
-            <p>What burger would you like today?</p>
-            {% else %}
+           
+            <div class="left-inner-1">
+                {% if request.user.is_authenticated %}
+                <p>
+                    Welcome back {{ user.username }}.
+                </p>
+                <p>What burger would you like today?</p>
+                {% else %}
 
-            <p> Hello Guest.</p>
+                <p> Hello Guest.</p>
 
-            <p>Get Your first burger for free!</p>
-            <a href="{% url 'account_signup' %}"><button class="button-store text-uppercase mt-0 mb-0">Sign up
-                    here.</button></a>
-            <br>
-            <a href="{% url 'account_login' %}"><button class="button-store text-uppercase mt-0 mb-0">Log
-                    in here.</button></a>
+                <p>Get Your first burger for free!</p>
+                <a href="{% url 'account_signup' %}" class="button-store text-uppercase mt-0 mb-0">Sign up
+                    here.</a>
+                <br>
+                <br>
+                <a href="{% url 'account_login' %}" class="button-store text-uppercase mt-0 mb-0">Log
+                    in here.</a>
 
-            {% endif %}
+                {% endif %}
+            </div>
+            <div class="left-inner-2">
+                <br>
+                <br>
+                <br>
+                <br>
 
-            <br>
-            <br>
-            <br>
-            <br>
+                <h1>The Nadz<i class="fas fa-arrow-right"></i>
+                </h1>
 
-            <h1>The Nadz<i class="fas fa-arrow-right"></i>
-            </h1>
-
-            <p>Our <strong>towering</strong> achievement</p>
-            <a href="{% url 'store'  %}"><button class="button-store">Go to the menu</button></a>
-
-            <br>
-            <br>
-            <br>
-            <br>
+                <p>Our <strong>towering</strong> achievement !</p>
+                <a href="{% url 'store'  %}" class="button-store text-uppercase mt-0 mb-0">Go to the menu</a>
+            </div>
 
         </div>
         <div class="left-3">
-            {% if request.user.is_authenticated %}
-            <p>
-                Welcome back {{ user.username }}.
-            </p>
-            <p>What burger would you like today?</p>
-            {% else %}
+            <div class="left-inner-1">
+                {% if request.user.is_authenticated %}
+                <p>
+                    Welcome back {{ user.username }}.
+                </p>
+                <p>What burger would you like today?</p>
+                {% else %}
 
-            <p> Hello Guest.</p>
+                <p> Hello Guest.</p>
 
-            <p>Get Your first burger for free!</p>
-            <a href="{% url 'account_signup' %}"><button class="button-store text-uppercase mt-0 mb-0">Sign up
-                    here.</button></a>
-            <br>
-            <a href="{% url 'account_login' %}"><button class="button-store text-uppercase mt-0 mb-0">Log
-                    in here.</button></a>
+                <p>Get Your first burger for free!</p>
+                <a href="{% url 'account_signup' %}" class="button-store text-uppercase mt-0 mb-0">Sign up
+                    here.</a>
+                <br>
+                <br>
+                <a href="{% url 'account_login' %}" class="button-store text-uppercase mt-0 mb-0">Log
+                    in here.</a>
 
-            {% endif %}
-            <br>
-            <br>
-            <br>
-            <br>
+                {% endif %}
+            </div>
+            <div class="left-inner-2">
+                <br>
+                <br>
+                <br>
+                <br>
 
-            <h1>The New Yorker<i class="fas fa-arrow-right"></i>
-            </h1>
+                <h1>The New Yorker<i class="fas fa-arrow-right"></i>
+                </h1>
 
-            <p>City sophistication</p>
-            <a href="{% url 'store'  %}"><button class="button-store">Go to the menu</button></a>
+                <p> City sophistication !</p>
+                <a href="{% url 'store'  %}" class="button-store text-uppercase mt-0 mb-0">Go to the menu</a>
+            </div>
 
 
         </div>
+
         <div class="left-4">
-            {% if request.user.is_authenticated %}
-            <p>
-                Welcome back {{ user.username }}.
-            </p>
-            <p>What burger would you like today?</p>
-            {% else %}
+            <div class="left-inner-1">
+                {% if request.user.is_authenticated %}
+                <p>
+                    Welcome back {{ user.username }}.
+                </p>
+                <p>What burger would you like today?</p>
+                {% else %}
 
-            <p> Hello Guest.</p>
+                <p> Hello Guest.</p>
 
-            <p>Get Your first burger for free!</p>
-            <a href="{% url 'account_signup' %}"><button class="button-store text-uppercase mt-0 mb-0">Sign up
-                    here.</button></a>
-            <br>
-            <a href="{% url 'account_login' %}"><button class="button-store text-uppercase mt-0 mb-0">Log
-                    in here.</button></a>
+                <p>Get Your first burger for free!</p>
+                <a href="{% url 'account_signup' %}" class="button-store text-uppercase mt-0 mb-0">Sign up
+                    here.</a>
+                <br>
+                <br>
+                <a href="{% url 'account_login' %}" class="button-store text-uppercase mt-0 mb-0">Log
+                    in here.</a>
 
-            {% endif %}
-            <br>
-            <br>
-            <br>
-            <br>
+                {% endif %}
+            </div>
+            <div class="left-inner-2">
+                <br>
+                <br>
+                <br>
+                <br>
 
-            <h1>Alloco<i class="fas fa-arrow-right"></i>
-            </h1>
-            <p>Inspired by the Ivory Coast</p>
-            <a href="{% url 'store'  %}"><button class="button-store">Go to the menu</button></a>
+                <h1>The Alloco<i class="fas fa-arrow-right"></i>
+                </h1>
+
+                <p> Inspired by the Ivory Coast</p>
+                <a href="{% url 'store'  %}" class="button-store text-uppercase mt-0 mb-0">Go to the menu</a>
+            </div>
         </div>
+
+
         <div class="left-5">
-            {% if request.user.is_authenticated %}
-            <p>
-                Welcome back {{ user.username }}.
-            </p>
-            <p>What burger would you like today?</p>
-            {% else %}
+            <div class="left-inner-1">
+                {% if request.user.is_authenticated %}
+                <p>
+                    Welcome back {{ user.username }}.
+                </p>
+                <p>What burger would you like today?</p>
+                {% else %}
 
-            <p> Hello Guest.</p>
+                <p> Hello Guest.</p>
 
-            <p>Get Your first burger for free!</p>
-            <a href="{% url 'account_signup' %}"><button class="button-store text-uppercase mt-0 mb-0">Sign up
-                    here.</button></a>
-            <br>
-            <a href="{% url 'account_login' %}"><button class="button-store text-uppercase mt-0 mb-0">Log
-                    in here.</button></a>
+                <p>Get Your first burger for free!</p>
+                <a href="{% url 'account_signup' %}" class="button-store text-uppercase mt-0 mb-0">Sign up
+                    here.</a>
+                <br>
+                <br>
+                <a href="{% url 'account_login' %}" class="button-store text-uppercase mt-0 mb-0">Log
+                    in here.</a>
 
-            {% endif %}
+                {% endif %}
+            </div>
+            <div class="left-inner-2">
+                <br>
+                <br>
+                <br>
+                <br>
 
-            <br>
-            <br>
-            <br>
-            <br>
+                <h1>The Éireann<i class="fas fa-arrow-right"></i>
+                </h1>
 
-            <h1>The Éireann<i class="fas fa-arrow-right"></i>
-            </h1>
-
-            <p>A burger for the Emerald Isle!</p>
-            <a href="{% url 'store'  %}"><button class="button-store">Go to the menu</button></a>
+                <p> A burger for the Emerald Isle</p>
+                <a href="{% url 'store'  %}" class="button-store text-uppercase mt-0 mb-0">Go to the menu</a>
+            </div>
         </div>
     </div>
     <div class="right-slide">

@@ -19,7 +19,7 @@
         <!-- the reason for this is to work around having a faulty image. -->
         <!-- Using direct linkage to the static/images was resulting in an app crash if there  was a missing/faulty image  -->
         <a href="{% url 'product_detail' product.id %}">
-          <img src="{{product.imageURL}}" class="card-img-top thumbnail" alt="...">
+          <img src="{{product.imageURL}}" class="card-img-top thumbnail" alt="a picture of the product">
         </a>
 
         <div class="card-body">
