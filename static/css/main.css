@@ -369,7 +369,6 @@ button:focus {
     min-width: 200px;
     height: 200px;
     box-shadow: -1px -3px 5px -2px rgba(214, 214, 214, 1);
-
 }
 
 .success-thumbnail {
@@ -592,6 +591,13 @@ button:focus {
 
     .burger-copyright {
         padding-left: 10px;
+    }
+
+    .thumbnail {
+        width: 50%;
+        min-width: 100px;
+        height: 100px;
+        box-shadow: -1px -3px 5px -2px rgba(214, 214, 214, 1);
     }
 }
 
