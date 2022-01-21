@@ -28,15 +28,14 @@ In a bricks and mortar establishment, it would work very well.
 1. As a **Potential Employer** for a Coding Role, I want to view Andrew’s website, to see how he performs as a Full stack developer. I want to be able to navigate the website and compare it to others, of similar scope.
 2. As a **Potential Employer** for a Coding Role, further to the above, I would be particularly interested in the use of Python and Django in this website.
 - - - -
-3. As a **site user**, I want to easily register for an account, so that I can have a personal account and view my profile.
-4. As a **site user**,  I want to have a profile, so that I can view my order history, delivery and payment details.
-5. As a **site user**, I want to be able to view other reviews.
-6. As a **site user**, I want to be able to create, update and delete my own reviews. 
-- - - -
-7. As a **shopper**, I want to be able to view a list of burgers, so I can choose one/many.
-8. As a **shopper**, I want to be able to view my shopping bag/cart, so I can keep track of my order and cost, and adjust quantities etc
-9. As a **shopper**, I want to be able to view pay without any fuss, so I can check out quickly, and get my burgers
-10. As a **shopper**, I want a record of orders placed
+3. As a **shopper**, I want to easily register for an account, so that I can have a personal account and view my profile.
+4. As a **shopper**,  I want to have a profile, so that I can view my order history, delivery and payment details.
+5. As a **shopper**, I want a record of orders placed
+6. As a **shopper**, I want to be able to view other reviews.
+7. As a **shopper**, I want to be able to create, update and delete my own reviews. 
+8. As a **shopper**, I want to be able to view a list of burgers, so I can choose one/many.
+9. As a **shopper**, I want to be able to view my shopping bag/cart, so I can keep track of my order and cost, and adjust quantities etc
+10. As a **shopper**, I want to be able to view pay without any fuss, so I can check out quickly, and get my burgers
 11. As a **shopper**, I want my payment info to be securely kept, so I do not need to worry about safety.
 12. As a **shopper**, I want to be able to store interesting products in a wishlist, which I can view later and from which I can purchase items.
 - - - -

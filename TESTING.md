@@ -36,71 +36,79 @@ With jshint, it informed me of the following:
       * "'template literal syntax' is only available in ES6 (use 'esversion: 6')." --> nothing changed.
 
 4. I used http://pep8online.com/ to validate the Python code.
-    * No errors found
-
+    * I got the same errors, repeated several times, usually about lines being too long, for example as shown [here.](https://imgur.com/ZdTBeIz")
 5. Google Light House Audit result:
 - - - -
-![image](https://i.imgur.com/HNM4WUo.png)
+
+Poor performace. The full [report](https://googlechrome.github.io/lighthouse/viewer/?psiurl=http%3A%2F%2Fmilestone-four-andrew.herokuapp.com%2F&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&category=pwa&utm_source=lh-chrome-ext) attributes this to Stripe, and also recommends using different formatting for the images. NB, if you click report, wait a few seconds for Lighthouse to work.
+![Imgur](https://i.imgur.com/KEX49Pc.jpg)
 
 - - - -
 *8.2 Test cases/ Testing the user goals/stories (section 2):* 
 - - - -
+Please note that I have chosen to list the screenshots in stead of displaying them, in order to improve legibility of this section.
+1. Potential Employer Goals (Readme Section 2.1, 2.2):
 
-1. Potential Employer Goals:
+* Upon entering the site, users are greeted with a visually attractive and interactive homepage, which establishes the purpose of the site and has a call to action:
+      * (register or sign in)
+      * go the menu
+      The Homepage changes greets a user if they are already signed in.
+* The navbar reinforces these options, and introduces new ones from the drop down profile button, and the wishlist next to it
 
-* Upon entering the site, users are greeted with a visually attractive homepage, with clear images, and boxes that highlight the main activities and purposes of the site.
+* From the [gitpod workspace](https://pink-slug-4n0r9b0e.ws-eu27.gitpod.io/) potential employers are welcome to view the django Project and applications.
 
-* The homepage immediately establishes the purpose of the website, and directs users to "get started" -as this is the left most option, and therefore the first for most people
-
-* The user has three main options, as shown on the home page, get started --> view reviews --> find out more about the listing this website
-
-* The navbar reinforces these options once rendered visible. To render it visible, the user clicks the top left button. This has a gentle animation that draws the users' attention, effectively mimicking the sun.
 - - - -
-  Full screen (1920*1080) homepage
+[Full screen (1920*1080) homepage](https://i.imgur.com/XCO18Fo.jpg)
 - - - -
-![image](https://i.imgur.com/PxAKljU.png)
-- - - -
-Full screen (1920*1080) Reviews
-- - - -
-  ![image](https://i.imgur.com/VP0FYlI.png)
-- - - -
-- - - -
-Full screen (1920*1080) Register
-- - - -
-  ![image](https://i.imgur.com/qRB6lXg.png)
-- - - -
- Reviews with an iPhone 8:
-- - - -
-![image](https://i.imgur.com/Hl80rEw.png)
-- - - -
- Register with an iPhone 8:
-- - - -
-![image](https://i.imgur.com/EfrLt6c.png)
-- - - -
- Homepage with an iPhone 8:
-- - - -
-![image](https://i.imgur.com/BFsvkpH.png)
+[Homepage with an iPhone XR](https://i.imgur.com/CHBVEsX.jpg)
 - - - -
 
-2. Users that want to view reviews:
-* Users can quickly and easily view the reviews and Home pages.
+2. Shoppers:
 - - - -
-  Full screen (1920*1080) homepage, navbar open
 - - - -
-![image](https://i.imgur.com/rUAuTiT.png)
+* [(Readme Section 2.3) Registration. Full screen (1920*1080)](https://i.imgur.com/aFJYD3M.jpg)
+
+* [(Readme Section 2.3) Registration. iPhone XR](https://i.imgur.com/EYlKzJN.jpg)
 - - - -
-Full screen (1920*1080) Reviews
 - - - -
-  ![image](https://i.imgur.com/VP0FYlI.png)
+* [(Readme Section 2.4, 2.5) Profile with record of orders placed. Full screen (1920*1080)](https://i.imgur.com/OlczaMG.jpg) Navigate to Profile
+* [(Readme Section 2.4, 2.5) Profile with record of orders placed. Full screen (1920*1080)](https://i.imgur.com/TOzuUyq.jpg) View Profile
+----
+* [(Readme Section 2.4, 2.5)Profile with record of orders placed. iPhone XR](https://i.imgur.com/XoiMYNp.jpg) Navigate to Profile
+* [(Readme Section 2.4, 2.5)Profile with record of orders placed. iPhone XR](https://i.imgur.com/I12Cni7.jpg) View Profile
 - - - -
- Homepage with an iPhone 8, navbar open:
- - - - -
-![image](https://i.imgur.com/gDDuBSI.png)
 - - - -
- Reviews with an iPhone 8:
+ 
+* [(Readme Section 2.6, 2.7) View reviews and CRUD own reviews. Full screen (1920*1080)](https://i.imgur.com/e6qUxrQ.jpg) access the reviews
+* [(Readme Section 2.6, 2.7) View reviews and CRUD own reviews. Full screen (1920*1080)](https://i.imgur.com/2rTRjWz.jpg) view all reviews, option to edit or delete
+* [(Readme Section 2.6, 2.7) View reviews and CRUD own reviews. Full screen (1920*1080)](https://i.imgur.com/QTWTIm0.jpg) edit a review
 - - - -
-![image](https://i.imgur.com/Hl80rEw.png)
+* [(Readme Section 2.6, 2.7) View reviews and CRUD own reviews. iPhone XR](https://i.imgur.com/8dGRdME.jpg) access the reviews
+* [(Readme Section 2.6, 2.7) View reviews and CRUD own reviews. iPhone XR](https://i.imgur.com/5c9Ogsp.jpg) view all reviews, option to edit or delete
+* [(Readme Section 2.6, 2.7) View reviews and CRUD own reviews. iPhone XR](https://i.imgur.com/l6BxxEk.jpg) edit a review
+
 - - - -
+- - - -
+* [(Readme Section 2.8) View the store. Full screen (1920*1080)](https://i.imgur.com/kl0Axmy.jpg) store general
+
+* [(Readme Section 2.8) View the store. iPhone XR](https://i.imgur.com/DHkwEaN.jpg)
+- - - -
+- - - -
+* [(Readme Section 2.9) View the cart. Full screen (1920*1080)]()
+
+* [(Readme Section 2.9) View the cart. iPhone XR]()
+- - - -
+- - - -
+* [(Readme Section 2.10, 2.11) Pay easily, and have payment details secure. Full screen (1920*1080)]()
+
+* [(Readme Section 2.10, 2.11) Pay easily, and have payment details secure. iPhone XR]()
+- - - -
+- - - -
+* [(Readme Section 2.12) Wishlist. Full screen (1920*1080)]()
+
+* [(Readme Section 2.12) Wishlist. iPhone XR]()
+- - - -
+
 
 3. Users that want to create/update and delete reviews:
 * The create, edit and delete functionality is accessed via the Profile and Review pages.

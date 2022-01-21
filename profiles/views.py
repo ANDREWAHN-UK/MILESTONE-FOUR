@@ -12,14 +12,14 @@ def profile(request):
     """ Display the user's profile. """
     profile = get_object_or_404(UserProfile, user=request.user)
 
-    # the below allows users to update their delivery details in their profile page - working
+    #  below for users to update  delivery details in  profile page
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
             form.save()
             messages.success(request, 'Profile updated successfully')
         else:
-            messages.error(request, 'Update failed. Please ensure the form is valid.')
+            messages.error(request, 'Update failed. Is the form valid?')
     else:
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
@@ -32,8 +32,6 @@ def profile(request):
     }
 
     return render(request, template, context)
-
-
 
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)

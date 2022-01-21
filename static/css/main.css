@@ -18,10 +18,7 @@ html {
     padding-bottom: 3rem;
 }
 
-a {
-    text-decoration: none;
-    color: #ffffff;
-}
+
 
 /* ====================================================={navbar}===================================================== */
 
@@ -218,6 +215,11 @@ a {
     top: 0;
     left: 0;
     transition: transform 0.5s ease-in-out;
+}
+
+.left-slide a {
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .left-slide>div {
