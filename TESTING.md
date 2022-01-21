@@ -139,9 +139,9 @@ When logged in as Admin/ superuser, the user can add, edit, delete products, and
 * [(Readme Section 2.14-->2.16) CRUD Products. iPhone XR](https://i.imgur.com/PFpV7TR.jpg) Admin can edit/delete any product
 - - - -
 - - - -
-iPhone 8 Admin Profile page, showing  edit/delete Profiles function :
+(Readme Section 2.18): Security
 - - - -
-![image](https://i.imgur.com/wlfwnhF.png)
+All pages were tested to ensure access rights. First, as a non-admin, e.g. User A, check that can add, edit, delete own reviews, then that a non-logged in/User B cannot target User's A content. Then check, by using the raw urls, that the website redirects the user.
 - - - -
 *8.3 Bugs and Bug Fixing:* 
 - - - -
