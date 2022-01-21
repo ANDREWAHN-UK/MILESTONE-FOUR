@@ -169,27 +169,53 @@
 {% endblock %}
 
 <!-- footer -->
-<div class="container-fluid">
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-bottom bottom-navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home' %}">
+            <img src="{% static 'media/home-icon-4.png' %}" alt="" width="30" height="24">
+        </a>
+      
+            <ul class="navbar-nav me-auto mb-0 mb-lg-0">
+                
+                <li class="nav-item"><a href="https://www.facebook.com" target="_blank"><i
+                            class="fab fa-facebook-square"></i></a></li>
+                <li class="nav-item"><a href="https://www.instagram.com" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                </li>
+                <li class="nav-item"><a href="https://twitter.com/?lang=en-gb" target="_blank"><i
+                            class="fab fa-twitter-square"></i></a></li>
+                <li class="nav-item"><a href="https://www.youtube.com" target="_blank"><i
+                            class="fab fa-youtube-square"></i></a>
+                </li>
+                <li class="nav-item"><a href="https://www.linkedin.com/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                </li>
+                <li class="nav-item"><a href="https://www.facebook.com" target="_blank"><i
+                            class="fab fa-facebook-square"></i></a></li>
+
+
+            </ul>
+
+       
+    </div>
+</nav>
+<!-- 
     <nav class="navbar bottom-navbar fixed-bottom ">
+<div class="container-fluid">
+        <ul class="navbar-nav mr-auto">
 
-        <li class="nav-item">
-            <a class="navbar-brand" href="{% url 'home' %}">
-                <img src="{% static 'media/home-icon-4.png' %}" alt="" width="30" height="24">
-            </a>
-        </li>
-        <li class="nav-item"><a href="https://www.facebook.com" target="_blank"><i
-                    class="fab fa-facebook-square"></i></a></li>
-        <li class="nav-item"><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-        </li>
-        <li class="nav-item"><a href="https://twitter.com/?lang=en-gb" target="_blank"><i
-                    class="fab fa-twitter-square"></i></a></li>
-        <li class="nav-item"><a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube-square"></i></a>
-        </li>
-        <li class="nav-item"><a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        </li>
+            <li class="nav-item">
+                <a class="navbar-brand" href="{% url 'home' %}">
+                    <img src="{% static 'media/home-icon-4.png' %}" alt="" width="30" height="24">
+                </a>
+            </li>
+            
 
-
-    </nav>
+        </ul>
 </div>
+
+    </nav> -->
+
 
 </html>

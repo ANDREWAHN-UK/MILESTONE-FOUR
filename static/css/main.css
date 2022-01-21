@@ -26,11 +26,15 @@ a {
 /* ====================================================={navbar}===================================================== */
 
 /* sets header and footer background colour */
-.navbar,
-.bottom-navbar {
+.navbar{
     background-color: black;
 }
 
+.bottom-navbar .nav-item{
+    padding-left:85px;
+    padding-right: 85px;
+    margin-top: 10px;
+}
 /* sets header and footer navlink colour, i.e .the text */
 .nav-link {
     color: #fff;
@@ -567,6 +571,12 @@ button:focus {
         font-size: 12px;
         padding: 10px;
     }
+
+    .bottom-navbar{
+        display: none;
+    }
+
+    
 }
 
 @media (max-width: 550px) {

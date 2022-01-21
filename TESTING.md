@@ -12,7 +12,8 @@ The html validator returned the errors:
   * "The element button must not appear as a descendant of the a element."  which I corrected.
   *	"The type attribute is unnecessary for JavaScript resources.". - corrected
   * "The element button must not appear as a descendant of the a element." & "The element a must not appear as a descendant of the button element." - This was on the homepage, so I adjusted the a tags to look like button, then adjust the viewports again.
-  * 
+  * "Stray start tag div." - on Home.html. I could not find any stray tag.
+  * "Element li not allowed as child of element nav in this context." - redid the offending bottom navbar
 
 2. I used https://jigsaw.w3.org/css-validator/ to validate the CSS:
 
