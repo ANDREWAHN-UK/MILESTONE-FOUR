@@ -235,7 +235,7 @@ in the views add_to_wishlist, remove_from_wishlist
     Please note the dates because of the next error:
 
 19. Heroku applied another database update, and this stopped the deployed app from doing anything with emails. The local server still worked.
-    * **Fix:** Due to timie constrainsts, I opted out of rebuilding the website, and instead set allauth to not require emails verifications.
+    * **Fix:** Due to time constrainsts, I opted out of rebuilding the website, and instead set allauth to not require email verifications.
 
 20. No email confirmations of orders.
     * **Fix:** As emails not working, not much to do here. However, users still have the order history in their profile.
