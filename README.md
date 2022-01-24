@@ -4,7 +4,8 @@
 
 **Website:**
 You can view the deployed website [here](https://milestone-four-andrew.herokuapp.com/)
- - - - -
+- - - -
+ Please Use 4242 repeated when testing the payment functionality.
 - - - -
 
 **1. Purpose of the project:**
@@ -21,7 +22,7 @@ This could still work, but I shelved that in favour of a simpler, easier to unde
 
 In a bricks and mortar establishment, it would work very well.
 
-The database schema can be found [here](https://i.imgur.com/JzDm9Pi.png).
+The database schema can be found [here](https://i.imgur.com/JzDm9Pi.png) and [here](https://github.com/ANDREWAHN-UK/Milestone-Four/blob/main/Documents/db_schema.png)
 
 
 - - - - 

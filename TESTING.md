@@ -230,7 +230,7 @@ in the views add_to_wishlist, remove_from_wishlist
     * **Fix:** As above – start anew
 
 18. Emails were not configuring properly.
-    * **Fix:** As was in new project at this point (due to Heroku database issues) I consulted [Django for Beginners](https://djangoforbeginners.com/introduction/) and secured my env variables as discussed in chapter 16, then set up my emails as discussed in chapter 12, using [SendGrid](https://sendgrid.com/)I then tested this by signing my partner up to the website, and checking to see if the verification email worked. Upon confirmation I then had to log in as the superuser and set her email as verified, as the website was not yet live.  I used a second email account of mine to set up a new user, and test the email that way on the live (i.e. Heroku app) website, and it worked, as shown ![below](https://i.imgur.com/teyjVZ5.jpg). Also, please note I consulted tutor support to try and fix this, but after they confirmed all the variables were correct, still no joy.
+    * **Fix:** As was in new project at this point (due to Heroku database issues) I consulted [Django for Beginners](https://djangoforbeginners.com/introduction/) and secured my env variables as discussed in chapter 16, then set up my emails as discussed in chapter 12, using [SendGrid](https://sendgrid.com/)I then tested this by signing my partner up to the website, and checking to see if the verification email worked. Upon confirmation I then had to log in as the superuser and set her email as verified, as the website was not yet live.  I used a second email account of mine to set up a new user, and test the email that way on the live (i.e. Heroku app) website, and it worked, as shown. ![below](https://i.imgur.com/teyjVZ5.jpg) Also, please note I consulted tutor support to try and fix this, but after they confirmed all the variables were correct, still no joy.
 
     Please note the dates because of the next error:
 
@@ -255,12 +255,24 @@ add: "or 0" to the end, so it reads:
 
 24. Order totals not showing up on deployed website. See below:
 - - - -
-Placing an order.
+Placing an order on Heroku:
 ![Imgur](https://i.imgur.com/L72mo9D.jpg)
 - - - -
-Order confirmation.
-[Imgur](https://i.imgur.com/Qlaf9lr.jpg)
-    * **Fix:** As emails not working, not much to do here. However, users still have the order history in their profile.
+Order confirmation on Heroku.
+![Imgur](https://i.imgur.com/Qlaf9lr.jpg)
+- - - -
+Placing an order on the local server:
+- - - -
+![Imgur](https://i.imgur.com/WORiJcR.jpg)
+- - - -
+Order confirmation on the local server:
+- - - -
+![Imgur](https://i.imgur.com/4N8suNI.jpg)
+- - - - 
+Both orders are being registered, and they also register on Stripe
+- - - -
+![Imgur](https://i.imgur.com/UabgXtn.jpg)
+    * **Fix:** As best as I, and Slack, can tell, this is an issue with signals. However, I have not been able to isolate it.
 - - - -
 *8.4 Supported screens and browsers:* 
 - - - -
@@ -303,4 +315,4 @@ The procedure for testing was as follows:
 
 Further testing was done with friends and family, and by submitting the code for peer review on slack, using fresh eyes to test the UX, most notably ease of navigation between pages, and visibility of text against coloured backgrounds.
 
-Results of this testing led to a **considerable** number of viewport adjustments, the majority of which was adjusting the behavious of the various containers, as discussed in 8.3.4.
+Results of this testing led to a **considerable** number of viewport adjustments, the majority of which was adjusting the behaviours of the various containers, as discussed in 8.3.4.
