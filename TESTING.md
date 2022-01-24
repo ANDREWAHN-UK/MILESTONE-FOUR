@@ -281,7 +281,7 @@ There are screenshots, available in the screenshots folder, that show the websit
 
 As there are several screenshots, rather than link them individually, I have linked the containing folder:
 
-[Screenshots](https://github.com/ANDREWAHN-UK/Milestone-Three/tree/main/static/screenshots)
+[Screenshots](https://github.com/ANDREWAHN-UK/Milestone-Four/tree/main/Documents/Screenshots)
 
 Additional testing on the view ports was done using [Multi Device Mockup Generator](https://techsini.com/multi-mockup/).
 
