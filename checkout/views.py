@@ -164,11 +164,10 @@ def checkout_success(request, order_number):
         user_profile_form = UserProfileForm(profile_data, instance=profile)
         if user_profile_form.is_valid():
             user_profile_form.save()
-            
         
     messages.success(request, f'Order successfully processed! \
-        Your order number is {order_number}. A confirmation \
-        email will be sent to {order.email}.')
+        Your order number is {order_number}. Check your \
+        Profile for your order history.')
 
     if 'cart' in request.session:
         del request.session['cart']
