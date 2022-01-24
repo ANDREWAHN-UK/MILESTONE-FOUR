@@ -21,6 +21,8 @@ This could still work, but I shelved that in favour of a simpler, easier to unde
 
 In a bricks and mortar establishment, it would work very well.
 
+The database schema can be found [here](https://i.imgur.com/JzDm9Pi.png).
+
 
 - - - - 
 **2. User Goals/stories**

@@ -145,52 +145,122 @@ All pages were tested to ensure access rights. First, as a non-admin, e.g. User 
 - - - -
 *8.3 Bugs and Bug Fixing:* 
 - - - -
-There were numerous teething issues with this being the first time using so much Python, Heroku etc.
+There were numerous challenges using so much Django.
 1.	App would not deploy on Heroku.
     * **Fix:** The config vars need to be exact. Errant commas or quotation marks stop the process working.
+    * **Fix:** Care needs to bew taken linking to services such as AWS, whitenoise, pyscopg2 etc.
+   
 
 
-2.	Edit Review function would not work.
-    * **Fix:** This took a week to fix. I rebuilt the entire website to divine a solution, which had to do with term definitions in the app.py file.
+2.	Admin would not work in Django 4.0 as needed csrf token.
+    * **Fix:** add `CSRF_TRUSTED_ORIGINS = ['https://*.GITPOD.IO','https://*.127.0.0.1']` in settings.py, to tell Django to allow anything from Gitpod.
 
 
-3.	The carousel provided by swiper.js would not scale down properly for smaller viewports.
-    * **Fix:** Used      height: 80%;    width: 100%;    margin: auto;    on  .swiper-slide img.
+3.	Getting a javascript file to access a Django variable
+    * **Fix:** [Quora](https://www.quora.com/How-does-one-access-Django-template-variables-in-JavaScript) put the Django variable inside a script tag and place that in the html file that loads the js.
 
 
-4.	Various of the containers would have their contents spill out on anything other than desktop resolutions.
-    * **Fix:** Using a height and width value in VH and VW, e.g. height: 50vh, was the cause. To solve it, I used % values, e.g. height: 50% along with a min-height/width value, e.g. min-height:50vh.
+4.	Could not get js function to update cart loading
+    * **Fix:** Solution – wrap it inside window.onload = function () NB - I moved away from this method in the end as the code was starting to look messy.
 
 
-6.	On smaller viewports, the positioning of the nav buttons (on the nav bar) would all shift too far up.
-    * **Fix:** In CSS position: Fixed.
+6.	js function to update cart threw up csrf tokens.
+    * **Fix:** Solution [here](https://docs.djangoproject.com/en/3.0/ref/csrf/#ajax) NB - I moved away from this method in the end as the code was starting to look messy.
 
 
-7.	Edit profile function would not work.
-    * **Fix:** I could only make this work for the admin. Users can't edit their own profile, which I think has to do with accessing the variables inside the Jinja for loop. Currently, this is set to (if admin, show option to edit/delete profile) but repeated experimenting with allowing users to do this resulted in the relevant webpage simply not displaying. Therefore, this was axed.
+7.	JS function would not post the update cart form using fetch.
+    * **Fix:** It turned out the offending error was an extraneous /. Instead of var url = 'update_item/' I had var url = '/update_item/' which caused it to get a Django 404 error. 
+NB, I abandoned this method of updating the cart, in favour of the method presented by Code Institute in their videos.
 
 
-8.	Users only able to upload single images.
-    * **Fix:** Research indicated a possible solution [here](https://devcenter.heroku.com/articles/simple-file-upload) however I chose not to pursue this, on account of time contraints
+
+8.	Javascript in postload block would not load.
+    * **Fix:** the post load block needs to sit inside the endblock that signifies the end of the page, and not like in the CI videos.
 
 
-9.	On the review page, having many reviews opened could make the page clumsy and overloaded.
-    * **Fix:** This is only+ really noticeable for the admin user, as they can see all reviews and all profiles. The fix is to limit the amount of items shown by the for loop, i.e.: {% for review  in reviews [:5] %} if one wanted 5 items listed. I couldn't find a way to list items in a for loop randomly, which is a drawback. With a limited view like this, users run the risk of not seeing a review they may be looking for. The search function works and partially mitigates this drawback. On the user profile page, this could in theory also become a problem. Note that no limiter has been put on the profiles the admin user can see, and there is currently no search function for the users.
+9.	In base.html, the CI code used to call the toasts `<script type="text/javascript">$('.toast').toast('show');</script>`
+ would not work.
+    * **Fix:** Use this instead:
+` <script type="text/javascript"> `
+     `$(document).ready(function() {`
+        `$(".toast").toast('show');`
+    `});`
+</script>
 
 
-10. Using a carousel instead of an accordion to house the reviews would not work.
-    * **Fix:** Research indicates this is to do with the .active class of the carousel not mixing well with the jinja for loop. In theory, something like this:
-     ``` {% for review in reviews %} {% if loop.index == 1 %} active{% endif %}  {% endfor %}```   would have fixed it. I experimented with this briefly, but due to time spent on Point 8.3.2 (edit function) I chose not to pursue this. Referring to Point 5.13.11 (Cards website) the same possible fix applies.
 
-11. Applying animationsto draw the user attention to hte cirtcle at top left of screen, caused the x (close) button to not show up
-    * **Fix:** Enclose the original circle within another circle, and apply animations to  the 2nd circle, but ensure 2nd circle position = fixed.
+10. Linking stripe variables to a settings variable, itself linked to the gitpod environment variables, stopped stripe from working. In other words, doing the actions of CI video Stripe – Part 4 and 5.
+    * **Fix:** At the top of the checkout view, instead of:
+   ` stripe_public_key = settings.STRIPE_PUBLIC_KEY `
+    `stripe_secret_key = settings.STRIPE_SECRET_KEY `
+use:
+`stripe_public_key = "the actual key from Stripe"`
+`stripe_secret_key = ' the actual key from Stripe '`
 
-12. The edit review and edit profile templates would not populate values.
-    * **Fix:** Save and restart several times. However, I could not get ratings field to populate , no matter what was tried.
 
-13. Because it is fiddly on smaller devices to select a url for images, this option was made non-required, which then led to potentially empty images for reviews & profile pages, not desired.
-    * **Fix:** Add in a default image if user did not put in a url. This works for reviews, but not for Profiles.
+11. Toasts would not close when clicking the x button.
+    * **Fix:** instead of :
+  ` <button type="button" class="ml-2 mb-1 close text-dark" data-dismiss="toast" aria-label="Close"><span aria-hidden="true">&times;</span></button> `
+Use 
+` <button type="button" class="btn-close close-toast" data-bs-dismiss="toast" aria-label="Close"></button> `
 
+This was due to CI code being in Bootstrap 4 but me using Bootstrap 5.
+
+
+12. Test webhooks from Stripe were not working.
+    * **Fix:** Gitpod server (8000) needs to be set to public. Solution found on Slack.
+
+13. Use of webhooks broke the functionality of the website, specifically being able to post orders.
+    * **Fix:** Revert git commits to last known working configurations, use print and console logs, and lots of internet sleuthing, to get website working again
+
+14. Heroku deployment did not use my static files.
+    * **Fix:** I used Django-Heroku at first, and then AWS.
+
+15. If a user selected multiple items in the store page and then clicked add to  wishlist, multiple copies of the item would be added to the wishlist, and when deleting from the wishlist, the app would throw an error, as get was supposed to find one, but instead found x items.
+    * **Fix:** As admin, delete the offending instances. Then, in wishlist views.py, add quantity=1 to the following:
+`product = Product.objects.get(pk=product_id, quantity=1)`
+
+in the views add_to_wishlist, remove_from_wishlist
+
+
+16. Heroku applied a database update which locked me out of my local database, and I could not run a local server.
+    * **Fix:** The internet says to [update the pg_hba.conf file](https://www.postgresql.org/docs/9.5/auth-pg-hba-conf.html) however this is stored by Heroku, and I could not access it. I had all functionality in my project except reviews by this point, so I simply rebuilt the project in a new repo. As most of the code was similar, it was a case of revising things and updating/tidying up. It took a bit of time, but avoided nasty errors and edge cases.
+
+17. Related to the last, Heroku applied another update, during which their database was read only, but I had a model registered, which I could then not update, putting the project at a dead end.
+    * **Fix:** As above – start anew
+
+18. Emails were not configuring properly.
+    * **Fix:** As was in new project at this point (due to Heroku database issues) I consulted [Django for Beginners](https://djangoforbeginners.com/introduction/) and secured my env variables as discussed in chapter 16, then set up my emails as discussed in chapter 12, using [SendGrid](https://sendgrid.com/)I then tested this by signing my partner up to the website, and checking to see if the verification email worked. Upon confirmation I then had to log in as the superuser and set her email as verified, as the website was not yet live.  I used a second email account of mine to set up a new user, and test the email that way on the live (i.e. Heroku app) website, and it worked, as shown ![below](https://i.imgur.com/teyjVZ5.jpg). Also, please note I consulted tutor support to try and fix this, but after they confirmed all the variables were correct, still no joy.
+
+    Please note the dates because of the next error:
+
+19. Heroku applied another database update, and this stopped the deployed app from doing anything with emails. The local server still worked.
+    * **Fix:** Due to timie constrainsts, I opted out of rebuilding the website, and instead set allauth to not require emails verifications.
+
+20. No email confirmations of orders.
+    * **Fix:** As emails not working, not much to do here. However, users still have the order history in their profile.
+
+21. Using a database variable threw up the following error: 
+        "connection to server at "ec2-63-34-223-144.eu-west-1.compute.amazonaws.com" (63.34.223.144), port 5432 failed: FATAL:  no pg_hba.conf entry for host "34.76.72.103", user "ruierkmjrmkfsf", database "d2lop4oummigm", SSL off."
+    * **Fix:** Given the effort already expended wrestling with Heroku, I instead chose to leave the database as a string in settings.py. This was the only way to get it to work.
+
+22. Could not delete orders in the admin panel.
+    * **Fix:** In the Orders model, line 58 checkout/models.py:
+`self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] `
+add: "or 0" to the end, so it reads:
+`self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0`
+
+23. Setting debug to false or `DEBUG = os.environ.get('DEVELOPMENT')` ruins the local server display, I assume because the static files were affected by the AWS settings on line 217 + in settings.py
+    * **Fix:** Leave it on true for now, put a giant note on desk to set to false for Project Deployment
+
+24. Order totals not showing up on deployed website. See below:
+- - - -
+Placing an order.
+![Imgur](https://i.imgur.com/L72mo9D.jpg)
+- - - -
+Order confirmation.
+[Imgur](https://i.imgur.com/Qlaf9lr.jpg)
+    * **Fix:** As emails not working, not much to do here. However, users still have the order history in their profile.
 - - - -
 *8.4 Supported screens and browsers:* 
 - - - -
